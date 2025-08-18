@@ -1,1 +1,89 @@
 @import "tailwindcss";
+
+/* @import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"); */
+
+body,
+h1 {
+  font-family: "DM Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.shadow-glass {
+  backdrop-filter: blur(5px);
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0.8),
+    rgba(255, 255, 255, 0.18)
+  );
+
+  z-index: 2;
+  border: 2px solid lightgrey;
+}
+
+nav {
+  background-color: rgba(61, 223, 255, 0.38);
+}
+div,
+section,
+span {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.hero-bg {
+  background-image: url("./assets/etooeko.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover;
+}
+
+.vertical-mode {
+  writing-mode: sideways-lr;
+}
+
+.linear-bg {
+  background: linear-gradient(to right, #ffffffd6, transparent);
+}
+
+.core-bg {
+  background-image: url("./assets/core-bg.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover;
+}
+
+.glass {
+  z-index: 2;
+  box-shadow: 0px 0px 8px black;
+  border: 2px solid lightgrey;
+  border-radius: 2px;
+}
+
+.transition-border {
+  transition: transform;
+  transition-duration: 0.4s;
+  transition-timing-function: ease-in-out;
+  transition-delay: 0s;
+  opacity: 0.9;
+}
+.transition-border:hover {
+  transform: translateY(-5px);
+  border-bottom: 3px solid #3ddfff;
+  opacity: 1;
+}
+
+.slow-shift {
+  transition: transform;
+  transition-duration: 0.4s;
+  transition-timing-function: ease-in-out;
+  transition-delay: 0s;
+}
+
+.slow-shift:hover {
+  transform: translateY(-5px);
+  background-color: #09a8c8;
+}

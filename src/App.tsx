@@ -1,9 +1,10 @@
 import "./App.css";
+import Routes_ from "./components/routes/Routes";
 
 function App() {
   return (
     <>
-      <h1 className="text-purple-900">Hello world</h1>
+      <Routes_ />
     </>
   );
 }
