@@ -1,8 +1,8 @@
 const WhoWeAre = () => {
   return (
     <>
-      <section className="h-screen  flex justify-between  mt-25 px-10 gap-10">
-        <div className=" w-3/6 who-we-are-bg"></div>
+      <section className="h-screen  flex justify-between  mt-25 px-10 gap-10 ">
+        <div className=" w-3/6 who-we-are-bg "></div>
 
         <div className=" w-3/6 flex justify-center  items-start flex-col gap-12">
           <h1 className="text-4xl font-medium font-sans">Who We Are!</h1>

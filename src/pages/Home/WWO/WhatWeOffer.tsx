@@ -72,7 +72,7 @@ Consulting.`,
 
   return (
     <>
-      <section className="h-screen  flex items-center  flex-col mt-10 gap-3">
+      <section className="h-screen  flex items-center  flex-col mt-36 gap-3">
         <h1 className="text-2xl font-medium font-sans">What we offer</h1>
         <p className="text-2xl font-medium">
           Providing Educational Pathways that shape Future Leaders.
@@ -101,6 +101,36 @@ Consulting.`,
               </div>
             </div>
           ))}
+        </div>
+
+        <div className=" h-full w-full flex justify-center items-center mt-10">
+          <div className="w-full grid grid-cols-3 p-10 gap-10 ">
+            {[
+              { id: 1, number: 100, boldHead: "Students", thinData: "Placed" },
+              {
+                id: 2,
+                number: 10,
+                boldHead: "Institutions",
+                thinData: "Supported",
+              },
+              {
+                id: 3,
+                number: 3,
+                boldHead: "Countries Actively",
+                thinData: "Recruiting",
+              },
+            ].map((elem) => (
+              <div className="font-bold  font-sans flex flex-col justify-center items-center">
+                <span className=" star text-white text-center flex justify-center items-center text-2xl">
+                  {elem.number}
+                </span>
+                <span className="text-center">
+                  <b className="text-xl font-bold"> {elem.boldHead}</b>
+                  <p className="font-normal">{elem.thinData}</p>
+                </span>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
     </>

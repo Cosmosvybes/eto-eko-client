@@ -177,3 +177,30 @@ span {
   transition: opacity 0.6s ease-in, visibility 0.6s ease-in;
   transform: translateY(-150px);
 }
+.star {
+  box-sizing: border-box;
+  border-radius: 10px;
+  width: 127.74px;
+  height: 130.11px;
+  background: #3ddfff;
+  border: 1px solid #0093b1;
+
+  /* Inside auto layout */
+  /* flex: none;
+  order: 0; */
+  /* align-self: stretch; */
+  flex-grow: 0;
+  clip-path: polygon(
+    50% 0%,
+    61% 35%,
+    98% 35%,
+    68% 57%,
+    79% 91%,
+    50% 70%,
+    21% 91%,
+    32% 57%,
+    2% 35%,
+    39% 35%
+  );
+  transform: rotate(-45deg);
+}
