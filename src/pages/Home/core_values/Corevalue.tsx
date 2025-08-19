@@ -23,7 +23,7 @@ is equipped to support them meaningfully.`,
 
   return (
     <>
-      <div className="h-[750px] px-36">
+      <div className="h-[750px] px-32 relative">
         <div className="  h-full flex justify-center px-10 py-10 core-bg">
           <div className="w-[493px] h-[147px] flex items-center py-5 flex-col ">
             <h1 className="text-4xl font-bold">Our Core</h1>
@@ -41,7 +41,7 @@ is equipped to support them meaningfully.`,
                 key={id}
               >
                 <h1 className="text-3xl font-bold text-[#0093B1]">{header}</h1>
-                <p className="font-sans text-[#0093B1] text-xl text-center">
+                <p className="font-sans text-[#0093B1] text-xl font-normal text-center">
                   {content}
                 </p>
               </div>

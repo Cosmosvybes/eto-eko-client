@@ -22,9 +22,34 @@ h1 {
   border: 2px solid lightgrey;
 }
 
+@keyframes oilSpill {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
 nav {
   background-color: rgba(61, 223, 255, 0.38);
+  z-index: 2;
+  backdrop-filter: blur(10px) saturate(270%);
+  box-shadow: 0 0 4px 30px rgba(0, 0, 0, 0.1);
 }
+
+.oil-effect {
+  background: linear-gradient(
+    360deg,
+    rgba(61, 223, 255, 0.38),
+    rgba(16, 119, 117, 0.624),
+    rgba(179, 179, 21, 0.652)
+  );
+  background-size: 300% 300%;
+  animation: oilSpill 5s ease-in-out infinite;
+  mix-blend-mode: color-dodge;
+}
+
 div,
 section,
 span {
@@ -56,11 +81,20 @@ span {
   background-size: cover;
 }
 
+.who-we-are-bg {
+  background-image: url("./assets/holding-building.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover;
+  border-radius: 1.5rem;
+}
+
 .glass {
-  z-index: 2;
+  z-index: 1;
   box-shadow: 0px 0px 8px black;
-  border: 2px solid lightgrey;
   border-radius: 2px;
+  mix-blend-mode: overlay;
 }
 
 .transition-border {
@@ -69,10 +103,11 @@ span {
   transition-timing-function: ease-in-out;
   transition-delay: 0s;
   opacity: 0.9;
+  border-bottom: none;
 }
 .transition-border:hover {
   transform: translateY(-5px);
-  border-bottom: 3px solid #3ddfff;
+  border-bottom: 3px solid #065f70;
   opacity: 1;
 }
 
@@ -86,4 +121,59 @@ span {
 .slow-shift:hover {
   transform: translateY(-5px);
   background-color: #09a8c8;
+}
+.hover-animate {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  box-shadow: 0px 4px 12.3px rgba(0, 0, 0, 0.25);
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.hover-animate #offerHeader {
+  opacity: 1;
+  visibility: visible;
+  transition: transform 0.5s ease-in, visibility 0.6s ease-in;
+}
+
+.hover-animate:hover #offerHeader {
+  transition: transform 0.4s ease-in;
+  transform: translateY(-100px);
+}
+.hover-animate #brief {
+  opacity: 1;
+  visibility: visible;
+  transition: transform 0.6s ease-in, visibility 0.6s ease-in;
+}
+
+.hover-animate:hover #brief {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease-in, visibility 0.6s ease-in;
+  transform: translateY(100px);
+}
+
+.hover-animate #logo {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.5s ease-in, visibility 0.5s ease-in;
+}
+.hover-animate:hover #logo {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.4s ease-in, visibility 0.4s ease-in;
+}
+
+.hover-animate #fullContent {
+  opacity: 0;
+  visibility: hidden;
+  transition: transform 0.5s ease-in, visibility 0.6s ease-in;
+}
+.hover-animate:hover #fullContent {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.6s ease-in, visibility 0.6s ease-in;
+  transform: translateY(-150px);
 }
