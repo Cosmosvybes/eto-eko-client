@@ -72,18 +72,18 @@ Consulting.`,
 
   return (
     <>
-      <section className="h-screen  flex items-center  flex-col mt-36 gap-3">
+      <section className="h-auto  flex items-center  flex-col mt-24  px-18 py-20">
         <h1 className="text-2xl font-medium font-sans">What we offer</h1>
         <p className="text-2xl font-medium">
           Providing Educational Pathways that shape Future Leaders.
         </p>
-        <div className=" h-full w-full grid grid-cols-3 p-10 gap-4">
+        <div className=" h-full w-full grid grid-cols-3   gap-5 p-32  max-sm:p-3">
           {offers.map(({ header, content, fullContent }, i) => (
             <div className="w-full rounded-lg" key={i}>
               <div
                 className={`w-5/6 ${
                   i % 2 !== 0
-                    ? "bg-[#3DDFFF] text-white"
+                    ? "bg-[#FF7700] text-white"
                     : "bg-white text-black"
                 } shadow-lg shadow-gray-200 h-full rounded-lg gap-5 p-5 flex justify-center items-start flex-col hover-animate`}
               >
@@ -95,15 +95,24 @@ Consulting.`,
                   {content}
                 </p>
 
-                <p className="font-sans font-medium " id="fullContent">
-                  {fullContent}
-                </p>
+                <div className="flex flex-col justify-center">
+                  <p className="font-sans font-medium " id="fullContent">
+                    {fullContent}
+                  </p>
+
+                  <button
+                    id="learnMoreBtn"
+                    className="rounded-full bg-[#FF7700] text-white font-medium p-3 w-1/2 "
+                  >
+                    Learn more
+                  </button>
+                </div>
               </div>
             </div>
           ))}
         </div>
 
-        <div className=" h-full w-full flex justify-center items-center mt-10">
+        <div className=" h-full w-full flex justify-center items-center  relative ">
           <div className="w-full grid grid-cols-3 p-10 gap-10 ">
             {[
               { id: 1, number: 100, boldHead: "Students", thinData: "Placed" },
@@ -121,12 +130,12 @@ Consulting.`,
               },
             ].map((elem) => (
               <div className="font-bold  font-sans flex flex-col justify-center items-center">
-                <span className=" star text-white text-center flex justify-center items-center text-2xl">
+                <span className="star text-white font-bold text-center flex justify-center items-center text-4xl">
                   {elem.number}
                 </span>
                 <span className="text-center">
-                  <b className="text-xl font-bold"> {elem.boldHead}</b>
-                  <p className="font-normal">{elem.thinData}</p>
+                  <b className="text-3xl font-bold"> {elem.boldHead}</b>
+                  <p className="font-normal text-xl">{elem.thinData}</p>
                 </span>
               </div>
             ))}

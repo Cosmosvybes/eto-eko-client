@@ -31,7 +31,7 @@ const Hero = () => {
 
   return (
     <>
-      <div className="relative flex justify-between w-full   ">
+      <div className="relative flex justify-between w-full ">
         <div className="relative w-16 flex flex-col ">
           <div className="relative  w-full h-auto flex-col gap-8 flex py-3 mt-3  items-center">
             <FaFacebook className="text-4xl" />
@@ -54,14 +54,14 @@ const Hero = () => {
               <label htmlFor="">
                 <input
                   type="text"
-                  className="w-full border p-4 px-4 rounded-4xl outline-none text-xl bg-gray-100 border-sky-500"
+                  className="w-full border p-4 px-4 rounded-4xl outline-none text-xl bg-gray-100 border-amber-600"
                   placeholder="Search here ..."
                 />
-                <GoSearch className="absolute text-3xl right-8 top-10 text-sky-300" />
+                <GoSearch className="absolute text-3xl right-8 top-10 text-amber-300" />
               </label>
 
               <div className="relative w-full mt-10 ">
-                <h1 className="font-sans font-extrabold text-6xl text-[#3DDFFF]">
+                <h1 className="font-sans font-extrabold text-6xl text-[#FF7700]">
                   Empowering Global Education & Inclusion.
                 </h1>
               </div>
@@ -75,7 +75,7 @@ const Hero = () => {
                 </p>
               </div>
 
-              <button className="w-[365px] h-[auto] text-[#FFFFFF] text-2xl font-bold bg-[#3DDFFF] rounded-full mt-10 px-3 py-4 slow-shift">
+              <button className="w-[365px] h-[auto] bg-[#FF7700] text-2xl font-bold text-white rounded-full mt-10 px-3 py-4 slow-shift">
                 {" "}
                 Get Started
               </button>
@@ -97,7 +97,7 @@ const Hero = () => {
         </div>
       </div>
 
-      <section className="h-auto flex gap-[30px] px-10 py-12 justify-between items-center relative">
+      <section className="h-screen  flex gap-[30px] px-10 py-12 justify-between items-center relative">
         {services.map(({ paragraph, header, img }) => (
           <ServiceFrame header={header} paragraph={paragraph} imgFile={img} />
         ))}

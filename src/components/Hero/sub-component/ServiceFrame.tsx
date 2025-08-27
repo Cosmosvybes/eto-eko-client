@@ -9,7 +9,7 @@ const ServiceFrame = ({
 }) => {
   return (
     <>
-      <div className=" w-2/4 h-[auto] gap-[13px] mt-2  flex flex-col items-center justify-start ">
+      <div className=" w-2/4 h-fit  gap-[13px] mt-2  flex flex-col items-center justify-start ">
         <div className="">
           <img
             src={imgFile}
@@ -22,7 +22,7 @@ const ServiceFrame = ({
           <h1 className="font-sans text-3xl text-center ">{header}</h1>
           <p className="text-center font-sans">{paragraph}</p>
 
-          <button className=" px-3 w-1/3 py-4 bg-[#3DDFFF] rounded-full">
+          <button className=" px-3 w-1/3 py-4 bg-[#FF7700] text-white rounded-full">
             Explore
           </button>
         </div>

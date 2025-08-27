@@ -32,16 +32,16 @@ is equipped to support them meaningfully.`,
             </h2>
           </div>
 
-          <div className="absolute w-full  bottom-0 h-[600px] py-10 px-10  flex justify-between z-10 gap-8">
+          <div className="absolute w-full  bottom-0 h-[600px] py-10 px-10 mt-5  flex justify-between z-10 gap-8">
             {values.map(({ id, header, content }, i) => (
               <div
                 className={`w-1/3 ${
                   i % 2 === 0 ? "h-[490px] mt-10" : "h-[550px]"
-                } flex px-10 justify-center gap-3 items-center flex-col z-20 bg-[#3DDFFF33]`}
+                } flex px-10 justify-center gap-3 items-center flex-col z-20 bg-[#EF760C33]`}
                 key={id}
               >
-                <h1 className="text-3xl font-bold text-[#0093B1]">{header}</h1>
-                <p className="font-sans text-[#0093B1] text-xl font-normal text-center">
+                <h1 className="text-3xl font-bold text-[#FF7700]">{header}</h1>
+                <p className="font-sans text-[#FF7700] text-xl font-normal text-center">
                   {content}
                 </p>
               </div>

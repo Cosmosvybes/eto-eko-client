@@ -31,23 +31,10 @@ h1 {
   }
 }
 
-nav {
-  background-color: rgba(61, 223, 255, 0.38);
+header{
+  background-color: #ff770059;
   z-index: 2;
-  backdrop-filter: blur(10px) saturate(270%);
-  box-shadow: 0 0 4px 30px rgba(0, 0, 0, 0.1);
-}
-
-.oil-effect {
-  background: linear-gradient(
-    360deg,
-    rgba(61, 223, 255, 0.38),
-    rgba(16, 119, 117, 0.624),
-    rgba(179, 179, 21, 0.652)
-  );
-  background-size: 300% 300%;
-  animation: oilSpill 5s ease-in-out infinite;
-  mix-blend-mode: color-dodge;
+  overflow: hidden;
 }
 
 div,
@@ -86,8 +73,16 @@ span {
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: scroll;
+  background-size: contain;
+  /* border-radius: 1.5rem; */
+}
+
+.plane-bg {
+  background-image: url("./assets/plane.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
   background-size: cover;
-  border-radius: 1.5rem;
 }
 
 .glass {
@@ -107,7 +102,7 @@ span {
 }
 .transition-border:hover {
   transform: translateY(-5px);
-  border-bottom: 3px solid #065f70;
+  border-bottom: 3px solid  #ff7700;
   opacity: 1;
 }
 
@@ -131,7 +126,23 @@ span {
   order: 0;
   flex-grow: 0;
 }
+.hover-animate:hover {
+  background-color: white;
+  color: black;
+}
 
+.hover-animate #learnMoreBtn {
+  opacity: 0;
+  visibility: hidden;
+  transition: transform 0.5s ease-in, visibility 0.6s ease-in;
+}
+
+.hover-animate:hover #learnMoreBtn {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.6s ease-in, visibility 0.6s ease-in;
+  transform: translateY(-100px);
+}
 .hover-animate #offerHeader {
   opacity: 1;
   visibility: visible;
@@ -182,9 +193,10 @@ span {
   border-radius: 10px;
   width: 127.74px;
   height: 130.11px;
-  background: #3ddfff;
-  border: 1px solid #0093b1;
+  background: #ff7700;
 
+  border: 1px solid #0093b1;
+  box-shadow: 10px 0px 18px rgba(0, 0, 0, 0.4);
   /* Inside auto layout */
   /* flex: none;
   order: 0; */
@@ -192,15 +204,40 @@ span {
   flex-grow: 0;
   clip-path: polygon(
     50% 0%,
-    61% 35%,
+    90% 70%,
     98% 35%,
-    68% 57%,
-    79% 91%,
+    68% 80%,
+    19% 91%,
     50% 70%,
     21% 91%,
-    32% 57%,
+    30% 57%,
     2% 35%,
     39% 35%
   );
-  transform: rotate(-45deg);
+  /* transform: rotate(180deg); */
+}
+.partner-w-us {
+  background-image: url("./assets/partner-w-us.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: contain;
+}
+.sunshine {
+  background-image: url("./assets/sunshine.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover;
+}
+
+.woman-bg {
+  background-image: url("./assets/womam.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover;
+}
+.footer-img-container img {
+  filter: drop-shadow(10px 10px 5px rgba(0, 0, 0, 0.5));
 }
