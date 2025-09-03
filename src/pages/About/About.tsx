@@ -1,36 +1,256 @@
-import { FaLinkedin } from "react-icons/fa6";
-import { RiTwitterXFill } from "react-icons/ri";
-import { FaFacebook, FaInstagramSquare } from "react-icons/fa";
 import PartnerWithUs from "../Home/sections/PartnerWithUs/PartnerWithUs";
 import Footer from "../../components/footer/Footer";
+import { useState } from "react";
+import { SERVICE_IMAGES } from "../../components/constants";
+import ServiceFrame from "../../components/Hero/sub-component/ServiceFrame";
+import { BiCaretUp } from "react-icons/bi";
+
+import { BsEnvelopeFill, BsTelephoneFill } from "react-icons/bs";
+
+import { MdShareLocation } from "react-icons/md";
+import DynamicHero from "../../components/Hero/sub-component/DynamicHero";
+
 export default function About() {
+  const [services] = useState([
+    {
+      paragraph:
+        "We guide students through every step of their international education journey from choosing the right course and country to visa support and settling in.",
+      header: "Student Recruitment",
+      img: SERVICE_IMAGES[3],
+    },
+    {
+      paragraph:
+        "We help institutions and governments create strategies, policies, and environments that welcome international students and foster inclusion.",
+      header: "Higher Education and Gorvernment Consulting",
+      img: SERVICE_IMAGES[4],
+    },
+    {
+      paragraph:
+        "Empowering teams and leaders with tools to succeed in diverse, global environments.",
+      header: "Training and Capacity Opportunities ",
+      img: SERVICE_IMAGES[5],
+    },
+  ]);
+
   return (
     <>
-      <div className="h-screen flex relative  justify-between items-center">
-        <div className="w-2/5 flex gap-3 justify-center items-center">
-          <div className="w-2/3  h-2/3 px-20">
-            <h1 className="text-[4rem] text-[#FF7700] ">About Us</h1>
-            <p className="font-medium text-xl font-sans">
-              Learn more about Etoeko.
+      <DynamicHero
+        title="About Us"
+        paragraph="Learn more about Etoeko"
+        bg="about-us"
+      />
+
+      <section className="h-[60rem] max-sm:w-full max-md:h-auto mt-20 max-sm:mt-14 max-md:mt-16  w-full">
+        <div className="w-11/12 h-full flex justify-between max-sm:w-full max-sm:flex-col ">
+          <div className="w-10/12 h-full block  max-md:px-20  px-28 max-sm:px-4 max-sm:w-full max-md:w-full">
+            <h1 className="text-[24px] font-semibold">Who We Are</h1>
+            <div className=" flex flex-col gap-5 mt-4">
+              <p>
+                Etoeko International Edventures Ltd is a global education
+                company dedicated to making international education accessible
+                to students from every corner of the world. We specialize in
+                recruiting students around the world from countries like
+                Nigeria, India, and Nepal into prestigious higher education
+                institutions in the UK, US, and beyond.
+              </p>
+
+              <p>
+                But we’re more than a recruitment agency we’re a change-driven
+                consultancy, working with education providers, businesses, and
+                governments to build inclusive, culturally agile, and
+                policy-informed educational environments.
+              </p>
+            </div>
+
+            <h1 className="text-[24px] font-semibold mt-5">
+              Global Reach, Local Expertise
+            </h1>
+            <div className=" flex flex-col gap-5 mt-4">
+              <p>
+                We connect students and institutions across borders with insight
+                into local challenges and aspirations.
+              </p>
+
+              <p>
+                We believe education is a global language, but one that must be
+                spoken with local understanding. By bridging institutions,
+                cultures, and students across borders, we ensure that
+                opportunities abroad remain relevant and responsive to local
+                aspirations. Our knowledge of regional challenges allows us to
+                guide students with strategies that fit their unique context,
+                while helping institutions engage meaningfully with diverse
+                communities worldwide.
+              </p>
+            </div>
+
+            <h1 className="text-[24px] font-semibold mt-5">
+              Ethical, Student-Centric Recruitment
+            </h1>
+            <div className=" flex flex-col gap-5 mt-4">
+              <p>
+                Our processes are transparent, supportive, and driven by student
+                success, not just numbers.
+              </p>
+
+              <p>
+                For us, recruitment is not about numbers—it’s about futures.
+                Every process we design is transparent, ethical, and built
+                around the individual student’s goals. We walk alongside
+                students with care and integrity, ensuring that their decisions
+                are well-informed and in their best interest. Success, to us, is
+                measured not just by enrollment, but by the long-term personal
+                and academic growth of the students we support.
+              </p>
+            </div>
+
+            <h1 className="text-[24px] font-semibold mt-5">
+              Inclusive by Design
+            </h1>
+            <div className=" flex flex-col gap-5 mt-4">
+              <p>
+                Inclusion isn’t an add-on; it’s embedded in our DNA. From the
+                way we write policies to the way we build partnerships, every
+                action is guided by a commitment to equity and belonging. We
+                actively create pathways for underrepresented students, foster
+                inclusive classroom environments, and champion diversity at
+                every level of engagement. For us, inclusion is both a principle
+                and a practice.
+              </p>
+            </div>
+
+            <h1 className="text-[24px] font-semibold mt-5">
+              Experienced & Mission-Led Team
+            </h1>
+            <div className=" flex flex-col gap-5 mt-4">
+              <p>
+                Our consultants and advisors come from diverse backgrounds in
+                higher education, international affairs, and cultural policy.
+              </p>
+
+              <p>
+                Our strength lies in the people behind our mission. With
+                backgrounds spanning higher education, international relations,
+                cultural policy, and student advisory services, our team brings
+                both depth and diversity of expertise. More than professionals,
+                we are advocates for students—driven by a shared vision of
+                making global education accessible, ethical, and transformative.
+              </p>
+            </div>
+          </div>
+          <div className="w-2/12 h-full  max-sm:w-full max-sm:mt-5  px-5">
+            <b className="font-bold text-xl max-md:text-xl max-sm:font-bold">
+              Discover more
+            </b>{" "}
+            <ul className="gap-3 flex flex-col mt-2">
+              <li className="flex justify-start  max-md:text-xl items-center max-sm:font-normal">
+                {" "}
+                <BiCaretUp className="text-4xl max-md:text-xl text-[#EF760C]" />{" "}
+                Our Services
+              </li>
+              <li className="flex justify-start max-md:text-xl items-center max-sm:font-normal">
+                {" "}
+                <BiCaretUp className="text-4xl max-md:text-xl text-[#EF760C]" />{" "}
+                Testimonials
+              </li>
+              <li className="flex justify-start max-md:text-xl items-center max-sm:font-normal">
+                {" "}
+                <BiCaretUp className="text-4xl max-md:text-2xl text-[#EF760C]" />{" "}
+                Partner Institutions
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <div className="h-screen max-sm:h-auto  max-md:h-auto py-20 max-sm:py-2 max-md:py-5 relative justify-center flex  flex-col items-center">
+        <h1 className="text-3xl mt-6">Our Sevices</h1>
+        <section className="h-screen  max-sm:h-auto max-md:h-auto w-full flex gap-[30px] px-10 py-12 justify-between max-sm:flex-col   max-md:flex-col  items-center relative">
+          {services.map(({ paragraph, header, img }) => (
+            <ServiceFrame header={header} paragraph={paragraph} imgFile={img} />
+          ))}
+        </section>
+      </div>
+
+      <section className="w-full h-[48rem] px-28 mb-20 max-sm:h-auto max-md:h-auto max-sm:px-2 max-md:px-4  max-sm:mb-14 max-md:mb-14 ">
+        <div className="w-full h-full max-sm:h-auto max-md:h-auto  flex justify-between items-center rounded-lg laptop-bg p-2 max-sm:flex-col max-md:flex-col">
+          <div className="w-2/5 h-full p-20 rounded-lg bg-[#EF760C] max-sm:w-full max-md:w-full  max-sm:p-2 max-md:p-4">
+            <p className="text-3xl font-sans font-normal text-white">
+              Contact Information
             </p>
 
-            <hr className="border-t border-black  w-full mt-2" />
+            <div className="w-full h-[24rem]  max-sm:h-auto max-md:h-auto flex justify-center  gap-5 flex-col items-center py-10 px-5">
+              <div className="flex gap-5 justify-start items-center  text-white w-full">
+                <BsTelephoneFill className="text-6xl text-white " />{" "}
+                <p className="font-8xl font-sans">+234 8140242752</p>
+              </div>
 
-            <div className="w-full flex justify-center items-center mt-2">
-              <p className="w-1/2 font-light">Follow us</p>
+              <div className="flex gap-5 justify-start items-center  text-white w-full">
+                <BsEnvelopeFill className="text-6xl text-white " />{" "}
+                <p className="font-8xl font-sans">info@etoeko.co.uk</p>
+              </div>
 
-              <div className="  flex w-full items-center justify-end gap-4 ">
-                <RiTwitterXFill className="text-4xl text-black" />
-                <FaInstagramSquare className="text-4xl text-black" />
-                <FaLinkedin className="text-4xl text-black" />
-                <FaFacebook className="text-4xl text-black" />
+              <div className="flex gap-5 justify-start items-center  text-white w-full">
+                <MdShareLocation className="text-6xl text-white " />{" "}
+                <p className="font-8xl font-sans">London, Uk</p>
+              </div>
+            </div>
+          </div>
+
+          <div className="flex flex-col justify-start py-10 items-center w-full h-full ">
+            <div className=" w-4/5 grid grid-cols-2 px-10 max-sm:px-2 max-md:px-4 max-sm:w-full max-md:w-full max-sm:grid-cols-1  gap-10 ">
+              {[
+                { id: 1, name: "Your name" },
+                { id: 2, name: "Phone" },
+              ].map(({ id, name }) => (
+                <label
+                  htmlFor=""
+                  className="flex flex-col p-1 w-full gap-2"
+                  key={id}
+                >
+                  <b className="text-white font-medium text-xl font-sans">
+                    {name}
+                  </b>
+                  <input
+                    type="text"
+                    className="border-b border-[#EF760C] outline-none hover:bg-gradient-to-b p-4 from-transparent text-white to-[rgba(255,255,255,0.06)]"
+                  />
+                </label>
+              ))}
+            </div>
+            <div className=" w-4/5 grid grid-cols-2 px-10 max-sm:px-2 max-md:px-4   max-sm:w-full max-md:w-full max-sm:grid-cols-1  gap-10 ">
+              <label htmlFor="" className="flex flex-col p-1 w-full gap-2">
+                <b className="text-white font-medium text-xl font-sans">
+                  Email
+                </b>
+                <input
+                  type="text"
+                  className="border-b border-[#EF760C] outline-none hover:bg-gradient-to-b p-4 from-transparent text-white to-[rgba(255,255,255,0.06)]"
+                />
+              </label>
+
+              <label
+                htmlFor=""
+                className="flex flex-col p-1 w-full gap-2 mt-20"
+              >
+                <b className="text-white font-medium text-xl font-sans">
+                  Message
+                </b>
+                <textarea
+                  placeholder="Enter your message here..."
+                  className="border-b border-[#EF760C] outline-none hover:bg-gradient-to-b from-transparent h-40 text-white to-[rgba(255,255,255,0.06)]"
+                />
+              </label>
+
+              <div className="w-full flex-col  py-3  ">
+                {" "}
+                <button className="w-[289px] rounded-full bg-amber-50 p-4 text-xl font-sans text-black">
+                  Send
+                </button>
               </div>
             </div>
           </div>
         </div>
-
-        <div className="w-3/5 border h-full"></div>
-      </div>
+      </section>
 
       <PartnerWithUs />
       <Footer />

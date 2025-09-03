@@ -31,14 +31,14 @@ const Hero = () => {
 
   return (
     <>
-      <div className="relative flex justify-between w-full ">
-        <div className="relative w-16 flex flex-col ">
+      <main className="relative flex justify-between w-full max-sm:mt-0 max-sm:h-auto max-md:h-auto">
+        <div className="relative w-16 max-sm:px-1 flex flex-col max-md:px-2 ">
           <div className="relative  w-full h-auto flex-col gap-8 flex py-3 mt-3  items-center">
-            <FaFacebook className="text-4xl" />
-            <SiLinkedin className="text-4xl" />
-            <FiInstagram className="text-4xl" />
-            <RiTwitterXFill className="text-4xl" />
-            <SiYoutube className="text-4xl" />
+            <FaFacebook className="text-4xl text-[#074941]" />
+            <SiLinkedin className="text-4xl text-[#074941]" />
+            <FiInstagram className="text-4xl text-[#074941]" />
+            <RiTwitterXFill className="text-4xl text-[#074941]" />
+            <SiYoutube className="text-4xl text-[#074941]" />
           </div>
 
           <div className="relative w-full h-auto justify-center flex ">
@@ -48,26 +48,26 @@ const Hero = () => {
           </div>
         </div>
 
-        <div className="h-[100vh]   hero-bg w-full flex gap-4 justify-between items-center">
-          <div className="linear-bg w-5/7 h-full flex justify-between  p-24  items-center ">
-            <div className="relative h-[auto] gap-18  w-[538px]  p-[24px]">
+        <div className="h-screen  hero-bg w-full  flex gap-4 justify-between items-center max-sm:p-0">
+          <div className="linear-bg w-5/7 h-full flex justify-between  p-24 max-sm:p-0  items-center max-smLw-full max-md:w-full ">
+            <div className="relative h-[auto] gap-18  max-sm:gap-5 w-[538px] max-sm:w-full max-md:w-full  p-[24px] max-sm:p-0">
               <label htmlFor="">
                 <input
                   type="text"
-                  className="w-full border p-4 px-4 rounded-4xl outline-none text-xl bg-gray-100 border-amber-600"
+                  className="w-full  p-4 px-4 rounded-4xl ml-2 outline-none text-xl bg-gray-100 border-amber-600 max-sm:px-2"
                   placeholder="Search here ..."
                 />
-                <GoSearch className="absolute text-3xl right-8 top-10 text-amber-300" />
+                <GoSearch className="absolute text-3xl right-8 top-10  max-sm:top-5 max-sm:right-4 text-amber-300" />
               </label>
 
-              <div className="relative w-full mt-10 ">
-                <h1 className="font-sans font-extrabold text-6xl text-[#FF7700]">
+              <div className="relative w-full mt-10 ml-2 ">
+                <h1 className="font-sans font-extrabold text-6xl max-sm:text-4xl text-[#FF7700]">
                   Empowering Global Education & Inclusion.
                 </h1>
               </div>
 
               <div className="w-full mt-10">
-                <p className="px-[10px] text-[20px] font-sans font-medium ">
+                <p className="px-[10px] text-[20px] max-sm:text-[16px] font-sans font-medium">
                   {" "}
                   Welcome to Eto-eko International Edventures Ltd your trusted
                   partner in international education, student recruitment, and
@@ -75,8 +75,7 @@ const Hero = () => {
                 </p>
               </div>
 
-              <button className="w-[365px] h-[auto] bg-[#FF7700] text-2xl font-bold text-white rounded-full mt-10 px-3 py-4 slow-shift">
-                {" "}
+              <button className="w-[365px] max-sm:h-16 ml-2 h-[auto] bg-[#FF7700] text-2xl max-sm:w-full max-md:w-full font-bold text-white rounded-full mt-10 px-3 py-4 max-sm:py-2 max-sm:px-2 transition duration-500 hover:bg-amber-800">
                 Get Started
               </button>
             </div>
@@ -95,11 +94,16 @@ const Hero = () => {
             </div>
           </div>
         </div>
-      </div>
+      </main>
 
-      <section className="h-screen  flex gap-[30px] px-10 py-12 justify-between items-center relative">
-        {services.map(({ paragraph, header, img }) => (
-          <ServiceFrame header={header} paragraph={paragraph} imgFile={img} />
+      <section className="h-screen max-sm:h-auto  max-md:h-auto flex gap-[30px] px-10 py-12 justify-between max-md:flex-col  max-sm:flex-col items-center relative max-sm:px-5">
+        {services.map(({ paragraph, header, img }, i) => (
+          <ServiceFrame
+            header={header}
+            paragraph={paragraph}
+            imgFile={img}
+            key={i}
+          />
         ))}
       </section>
     </>

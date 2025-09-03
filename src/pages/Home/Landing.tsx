@@ -1,6 +1,5 @@
 import Corevalue from "./sections/core_values/Corevalue";
 import Hero from "../../components/Hero/Hero";
-import Navbar from "../../components/navs/Navbar";
 import WhoWeAre from "./sections/WWA/WhoWeAre";
 import WhatWeOffer from "./sections/WWO/WhatWeOffer";
 import PartnerWithUs from "./sections/PartnerWithUs/PartnerWithUs";
@@ -13,7 +12,7 @@ import Footer from "../../components/footer/Footer";
 const Landing = () => {
   return (
     <>
-      <div className="relative">
+      <div className="h-auto">
         <Hero />
         <Corevalue />
         <WhoWeAre />

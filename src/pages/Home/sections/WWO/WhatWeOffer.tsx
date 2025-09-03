@@ -1,5 +1,9 @@
 import { useState } from "react";
-import { FaServicestack } from "react-icons/fa6";
+import { FaConnectdevelop, FaUsers } from "react-icons/fa";
+import { FaGlobe, FaTeamspeak } from "react-icons/fa6";
+import { MdPhoneInTalk } from "react-icons/md";
+import { RiCustomerService2Fill } from "react-icons/ri";
+
 const WhatWeOffer = () => {
   const [offers] = useState([
     {
@@ -12,6 +16,7 @@ journey, from program selection to university
 applications, ensuring alignment with your career 
 goals and aspirations. Strategic Educational 
 Consulting.`,
+      icon: <FaGlobe className="text-8xl" id="logo" />,
     },
     {
       id: 2,
@@ -23,6 +28,7 @@ journey, from program selection to university
 applications, ensuring alignment with your career 
 goals and aspirations. Strategic Educational 
 Consulting.`,
+      icon: <FaUsers className="text-8xl" id="logo" />,
     },
     {
       id: 3,
@@ -34,6 +40,7 @@ journey, from program selection to university
 applications, ensuring alignment with your career 
 goals and aspirations. Strategic Educational 
 Consulting.`,
+      icon: <FaConnectdevelop className="text-8xl" id="logo" />,
     },
     {
       id: 4,
@@ -45,6 +52,7 @@ journey, from program selection to university
 applications, ensuring alignment with your career 
 goals and aspirations. Strategic Educational 
 Consulting.`,
+      icon: <FaTeamspeak className="text-8xl" id="logo" />,
     },
     {
       id: 5,
@@ -56,6 +64,7 @@ journey, from program selection to university
 applications, ensuring alignment with your career 
 goals and aspirations. Strategic Educational 
 Consulting.`,
+      icon: <RiCustomerService2Fill className="text-8xl" id="logo" />,
     },
     {
       id: 6,
@@ -67,27 +76,30 @@ journey, from program selection to university
 applications, ensuring alignment with your career 
 goals and aspirations. Strategic Educational 
 Consulting.`,
+      icon: <MdPhoneInTalk className="text-8xl" id="logo" />,
     },
   ]);
 
   return (
     <>
-      <section className="h-auto  flex items-center  flex-col mt-24  px-18 py-20">
-        <h1 className="text-2xl font-medium font-sans">What we offer</h1>
-        <p className="text-2xl font-medium">
+      <section className="h-auto  flex items-center  flex-col mt-24 max-md:mt-0 max-sm:mt-5  px-18 py-20 max-sm:px-2 gap-5 ">
+        <h1 className="text-4xl font-medium max-sm:text-center font-sans">
+          What we offer
+        </h1>
+        <p className="text-2xl font-medium max-sm:font-normal max-sm:text-center max-md:text-center ">
           Providing Educational Pathways that shape Future Leaders.
         </p>
-        <div className=" h-full w-full grid grid-cols-3   gap-5 p-32  max-sm:p-3">
-          {offers.map(({ header, content, fullContent }, i) => (
+        <div className=" h-full w-full grid grid-cols-3 max-sm:grid-cols-1  max-md:grid-cols-1 max-sm:mt-2  gap-5 p-32 max-md:p-3  max-sm:p-3">
+          {offers.map(({ header, content, fullContent, icon }, i) => (
             <div className="w-full rounded-lg" key={i}>
               <div
                 className={`w-5/6 ${
                   i % 2 !== 0
                     ? "bg-[#FF7700] text-white"
                     : "bg-white text-black"
-                } shadow-lg shadow-gray-200 h-full rounded-lg gap-5 p-5 flex justify-center items-start flex-col hover-animate`}
+                } shadow-lg shadow-gray-200 h-full max-sm:h-auto max-sm:w-full  max-md:w-full rounded-lg gap-5 p-5   flex justify-center items-start flex-col hover-animate`}
               >
-                <FaServicestack className="text-8xl" id="logo" />
+                {icon}
                 <h1 className="text-xl font-sans " id="offerHeader">
                   {header}
                 </h1>
@@ -113,7 +125,7 @@ Consulting.`,
         </div>
 
         <div className=" h-full w-full flex justify-center items-center  relative ">
-          <div className="w-full grid grid-cols-3 p-10 gap-10 ">
+          <div className="w-full grid grid-cols-3 max-sm:grid-cols-1 p-10 gap-10 ">
             {[
               { id: 1, number: 100, boldHead: "Students", thinData: "Placed" },
               {
@@ -129,7 +141,7 @@ Consulting.`,
                 thinData: "Recruiting",
               },
             ].map((elem) => (
-              <div className="font-bold  font-sans flex flex-col justify-center items-center">
+              <div key={elem.id} className="font-bold  font-sans flex flex-col justify-center items-center">
                 <span className="star text-white font-bold text-center flex justify-center items-center text-4xl">
                   {elem.number}
                 </span>

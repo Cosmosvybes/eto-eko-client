@@ -3,11 +3,13 @@ import type { ROUTE } from "../../interfaces";
 import Landing from "../../pages/Home/Landing";
 import About from "../../pages/About/About";
 import Navbar from "../navs/Navbar";
+import Service from "../../pages/Services/Service";
 
 const Routes_ = () => {
   const routes: ROUTE[] = [
-    { path: "/Home", element: <Landing /> },
-    { path: "/About us", element: <About /> },
+    { path: "/", element: <Landing /> },
+    { path: "/about-us", element: <About /> },
+    { path: "/our-services", element: <Service /> },
   ];
 
   return (

@@ -2,6 +2,13 @@
 
 /* @import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"); */
 
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "roboto", sans-serif;
+}
+
 body,
 h1 {
   font-family: "DM Sans", sans-serif;
@@ -19,7 +26,6 @@ h1 {
   );
 
   z-index: 2;
-  border: 2px solid lightgrey;
 }
 
 @keyframes oilSpill {
@@ -31,7 +37,7 @@ h1 {
   }
 }
 
-header{
+header {
   background-color: #ff770059;
   z-index: 2;
   overflow: hidden;
@@ -72,9 +78,8 @@ span {
   background-image: url("./assets/holding-building.jpg");
   background-position: center;
   background-repeat: no-repeat;
-  background-attachment: scroll;
+  /* background-attachment: scroll; */
   background-size: contain;
-  /* border-radius: 1.5rem; */
 }
 
 .plane-bg {
@@ -102,7 +107,7 @@ span {
 }
 .transition-border:hover {
   transform: translateY(-5px);
-  border-bottom: 3px solid  #ff7700;
+  border-bottom: 3px solid #ff7700;
   opacity: 1;
 }
 
@@ -193,7 +198,7 @@ span {
   border-radius: 10px;
   width: 127.74px;
   height: 130.11px;
-  background: #ff7700;
+  background: #074941;
 
   border: 1px solid #0093b1;
   box-shadow: 10px 0px 18px rgba(0, 0, 0, 0.4);
@@ -227,7 +232,7 @@ span {
   background-image: url("./assets/sunshine.jpg");
   background-position: center;
   background-repeat: no-repeat;
-  background-attachment: scroll;
+  /* background-attachment: scroll; */
   background-size: cover;
 }
 
@@ -238,6 +243,43 @@ span {
   background-attachment: scroll;
   background-size: cover;
 }
-.footer-img-container img {
+.shadow-filter {
   filter: drop-shadow(10px 10px 5px rgba(0, 0, 0, 0.5));
+}
+
+.about-us {
+  background-image: url("./assets/aboutBg.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover;
+}
+
+.our-service {
+  background-image: url("./assets/ourservicesbg.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover;
+}
+
+.top-left {
+  background-position: left top;
+}
+.top-right {
+  background-position: right bottom;
+}
+.bottom-left {
+  background-position: left bottom;
+}
+.bottom-right {
+  background-position: right bottom;
+}
+
+.laptop-bg {
+  background-image: url("./assets/laptopontable.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover;
 }

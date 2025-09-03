@@ -45,7 +45,7 @@ const Footer = () => {
 
   return (
     <>
-      <footer className="h-[90rem]   relative flex justify-center items-center flex-col ">
+      <footer className="h-[90rem] max-sm:h-auto max-md:h-auto  relative flex justify-center items-center flex-col ">
         <div className="h-2/5  w-full relative bg-white">
           <div className="w-full h-1/2 flex justify-center items-center ">
             <span>
@@ -61,11 +61,11 @@ const Footer = () => {
 
         <div className="h-full w-full bg-[#FF7700] flex justify-center flex-col items-center relative ">
           <div className="absolute w-12/13  justify-self-center h-96 -top-56 woman-bg flex flex-col gap-5 rounded-2xl place-content-center items-center">
-            <h1 className="text-5xl font-extrabold text-white font-sans">
+            <h1 className="text-5xl max-sm:text-3xl max-md:text-4xl max-sm:text-center font-extrabold text-white font-sans">
               Ready to shape your future?{" "}
             </h1>
 
-            <h1 className="text-5xl font-extrabold text-white font-sans">
+            <h1 className="text-5xl max-sm:text-3xl font-extrabold text-white font-sans">
               Let's begin!
             </h1>
 
@@ -74,13 +74,13 @@ const Footer = () => {
             </button>
           </div>
 
-          <div className="relative h-auto  flex justify-evenly w-full px-8  items-start mt-40">
-            <div className="footer-img-container flex justify-start flex-col w-1/4 h-auto px-8  ">
-              <div className="w-5/6 px-10 -mt-5 ">
+          <div className="relative h-auto  flex justify-evenly w-full px-8  items-start mt-40 max-sm:px-2 max-md:flex-col ">
+            <div className=" flex justify-start flex-col w-1/4 h-auto px-8 max-sm:w-full max-md:w-full  max-sm:p-2 ">
+              <div className="w-5/6 px-10 -mt-5 max-sm:px-0 max-md:px-2 max-sm:w-full ">
                 <img
                   src={logo}
                   alt=""
-                  className="w-full h-44 object-contain -ml-12"
+                  className="w-full h-44 shadow-filter object-contain -ml-12 max-sm:-ml-6 max-md:-ml-40"
                 />{" "}
                 <p className="font-sans  font-medium text-white">
                   We believe education should be accessible, inclusive, and
@@ -92,40 +92,41 @@ const Footer = () => {
               </div>
             </div>
 
-            <div className="footer-img-container  w-1/4 h-auto p-10 ">
+            <div className="footer-img-container  w-1/4 h-auto p-10   px-8 max-sm:w-full max-md:w-full max-sm:p-2  ">
               <h1 className="text-xl font-extrabold font-sans text-white">
                 {subMenus[0].header}
               </h1>
-              <ul className="flex flex-col gap-10 mt-10  ">
+              <ul className="flex flex-col gap-10 mt-10  max-sm:mt-2 max-md:mt-3  max-sm:gap-5  ">
                 {subMenus[0].children.map((link) => (
-                  <li className="cursor-pointer text-white">{link}</li>
+                  <li key={link} className="cursor-pointer text-white">{link}</li>
                 ))}
               </ul>
             </div>
-            <div className="footer-img-container  w-1/4 h-auto  p-10">
+
+            <div className="footer-img-container  w-1/4 h-auto p-10   px-8 max-sm:w-full max-md:w-full max-sm:p-2  ">
               <h1 className="text-xl font-extrabold font-sans text-white">
                 {subMenus[1].header}
               </h1>
-              <ul className="flex flex-col gap-10 mt-10  ">
+              <ul className="flex flex-col gap-10 mt-10  max-sm:mt-2 max-md:mt-3 max-sm:gap-5 ">
                 {subMenus[1].children.map((link) => (
-                  <li className="cursor-pointer text-white">{link}</li>
+                  <li key={link} className="cursor-pointer text-white">{link}</li>
                 ))}
               </ul>
             </div>
-            <div className="footer-img-container  w-1/4 h-auto  p-10">
+            <div className="footer-img-container  w-1/4 h-auto p-10   px-8 max-sm:w-full max-md:w-full max-sm:p-2  ">
               <h1 className="text-xl font-extrabold font-sans text-white">
                 {subMenus[2].header}
               </h1>
-              <ul className="flex flex-col gap-10 mt-10  ">
+              <ul className="flex flex-col gap-10 mt-10  max-sm:mt-2 max-md:mt-3 max-sm:gap-5 ">
                 {subMenus[2].children.map((link) => (
-                  <li className="cursor-pointer text-white">{link}</li>
+                  <li key={link} className="cursor-pointer text-white">{link}</li>
                 ))}
               </ul>
             </div>
           </div>
 
-          <div className="relative h-1/3  flex justify-evenly w-full px-8 items-end ">
-            <div className="w-[246px] h-[218px] ">
+          <div className="relative h-1/3 max-md:w-full flex justify-evenly w-full px-14 items-end max-sm:px-2 max-sm:h-auto max-sm:flex-col max-md:flex-col ">
+            <div className="w-[246px] h-[218px] max-sm:w-full max-md:w-full">
               <img
                 src={glassHouse}
                 alt="complex-building"
@@ -133,24 +134,25 @@ const Footer = () => {
               />
             </div>
 
-            <div className="w-1/4  flex justify-center items-end px-10 py-4">
-              <div className=" w-full flex  items-end justify-center gap-4 ">
-                <FaLocationDot className="text-6xl text-white" />
-                <p className="text-white font-sans">
+            <div className="footer-img-container  w-1/4 h-auto p-10   px-8 max-sm:w-full max-md:w-full max-sm:p-2  max-md:p-5">
+              <div className=" w-full flex  items-end justify-center max-sm:justify-start gap-4  max-sm:gap-2">
+                <FaLocationDot className="text-6xl text-white max-sm:text-5xl" />
+                <p className="text-white font-sans ">
                   6th Floor, Park Royal, 2 Lake Drive, First Central 200 Abuja,
                   NW10 7FQ, Nigeria.{" "}
                 </p>
               </div>
             </div>
-            <div className="w-1/4  flex justify-center items-end px-10 py-4">
-              <div className=" w-full flex  items-center justify-center gap-4 ">
-                <HiMailOpen className="text-6xl text-white" />
+
+            <div className="w-1/4 max-sm:w-full max-md:w-full flex justify-center items-end p-10 py-4 max-sm:p-2">
+              <div className=" w-full flex  items-center justify-center gap-4 max-sm:justify-start  max-md:justify-start max-sm:-ml-2 max-md:-ml-10 ">
+                <HiMailOpen className="text-6xl text-white max-sm:text-4xl" />
                 <p className="text-white font-sans">info@etoeko.com.uk</p>
               </div>
             </div>
 
-            <div className="w-1/4  flex justify-center items-end px-10 py-4">
-              <div className=" w-full flex  items-center justify-start gap-10 ">
+            <div className="w-1/4 max-sm:w-full max-md:w-full  flex justify-center items-end p-10 max-sm:p-0 py-4 max-sm:mt-4">
+              <div className=" w-full flex  items-center justify-start gap-6 max-sm:gap-3 max-md:-ml-5 max-sm:ml-2 ">
                 <FaFacebook className="text-3xl text-white" />
                 <FaLinkedin className="text-3xl text-white" />
                 <FaInstagram className="text-3xl text-white" />
@@ -160,20 +162,20 @@ const Footer = () => {
             </div>
           </div>
 
-          <div className=" w-full  bg-[#FF7700] mt-10  px-16">
+          <div className=" w-full  bg-[#FF7700] mt-10  px-16 max-sm:px-2">
             <div className="w-full border-b border-white"></div>
-            <div className="h-auto  flex justify-between items-center gap-2 mt-5">
-              <div className=" w-2/6  font-sans flex justify-center items-center text-white">
+            <div className="h-auto  flex justify-between items-center gap-2 mt-5 max-sm:flex-col">
+              <div className=" w-2/6 max-sm:w-full  font-sans flex justify-center items-center text-white">
                 <p>
                   Copyright &copy; {new Date().getFullYear()} Consulting
                   Education, All rights reserved. Powered by Etoeko.
                 </p>
               </div>
-              <div className=" w-4/6  p-2">
-                <div className="flex justify-end items-center gap-10">
+              <div className=" w-4/6 max-sm:w-full max-sm:mb-4  p-2 max-sm:p-0">
+                <div className="flex justify-end items-center gap-10 max-sm:flex-col max-md:flex-col max-sm:gap-2 max-sm:items-start">
                   {["Terms of use", "Cookie policy", "Privacy policy"].map(
                     (text) => (
-                      <Link to={"#"} className="font-sans text-xl text-white">
+                      <Link key={text} to={"#"} className="font-sans text-xl text-white">
                         {text}
                       </Link>
                     )
