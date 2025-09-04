@@ -96,7 +96,7 @@ const Hero = () => {
         </div>
       </main>
 
-      <section className="h-screen max-sm:h-auto  max-md:h-auto flex gap-[30px] px-10 py-12 justify-between max-md:flex-col  max-sm:flex-col items-center relative max-sm:px-5">
+      <section className="lg:h-auto max-sm:h-auto  max-md:h-auto flex gap-[30px] px-10 py-12 justify-between max-md:flex-col  max-sm:flex-col items-center relative max-sm:px-5">
         {services.map(({ paragraph, header, img }, i) => (
           <ServiceFrame
             header={header}

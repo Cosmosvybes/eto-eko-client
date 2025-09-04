@@ -13,13 +13,13 @@ const DynamicHero = ({
 }) => {
   return (
     <>
-      <div className="h-screen flex relative  max-md:h-auto   justify-between items-center max-sm:h-auto max-sm:items-start max-sm:flex-col">
-        <div className="w-2/5 flex gap-3 justify-center items-center max-sm:w-full max-md:w-full">
-          <div className="w-2/3  h-2/3 px-10 max-sm:w-full max-sm:px-2  max-md:px-2 ">
-            <h1 className="text-[4rem] max-md:text-[2rem] text-[#FF7700] ">
+      <div className="lg:h-screen flex relative  max-md:h-auto   justify-between items-center max-sm:h-auto max-sm:items-start max-sm:flex-col">
+        <div className="lg:w-2/5 flex gap-3 justify-center items-center max-sm:w-full max-md:w-full">
+          <div className="lg:w-2/3  lg:h-2/3 px-10 max-sm:w-full max-sm:px-2  max-md:px-2 ">
+            <h1 className="lg:text-[3rem] max-md:text-[2rem] text-[#FF7700] ">
               {title}
             </h1>
-            <p className="font-medium text-xl font-sans">
+            <p className="font-medium text-xl  font-sans">
               {paragraph}
               {/* Learn more about Etoeko. */}
             </p>
@@ -39,8 +39,8 @@ const DynamicHero = ({
           </div>
         </div>
 
-        <div className="w-3/5 h-full flex max-sm:mt-5  justify-center max-md:px-2 items-start max-md:w-4/5 px-50 max-sm:w-full max-sm:px-2 max-sm:h-[32rem] max-md:h-[44rem]">
-          <div className="w-full  h-full grid grid-cols-4 gap-1 px-24 max-sm:px-2  max-md:px-2">
+        <div className="lg:w-3/5 h-full flex max-sm:mt-5  justify-center max-md:px-2 items-start max-md:w-4/5 px-50 max-sm:w-full max-sm:px-2 max-sm:h-[32rem] max-md:h-[44rem]">
+          <div className="w-full  h-full grid grid-cols-4 gap-1 lg:px-0 max-sm:px-2  max-md:px-2">
             {["top-left", "top-right", "bottom-left", "bottom-right"].map(
               (pos, i) => (
                 <div

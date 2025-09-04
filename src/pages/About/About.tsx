@@ -3,7 +3,7 @@ import Footer from "../../components/footer/Footer";
 import { useState } from "react";
 import { SERVICE_IMAGES } from "../../components/constants";
 import ServiceFrame from "../../components/Hero/sub-component/ServiceFrame";
-import { BiCaretUp } from "react-icons/bi";
+import { BiCaretUp, BiSolidArrowToRight } from "react-icons/bi";
 
 import { BsEnvelopeFill, BsTelephoneFill } from "react-icons/bs";
 
@@ -45,7 +45,7 @@ export default function About() {
           <div className="w-10/12 h-full block  max-md:px-20  px-28 max-sm:px-4 max-sm:w-full max-md:w-full">
             <h1 className="text-[24px] font-semibold">Who We Are</h1>
             <div className=" flex flex-col gap-5 mt-4">
-              <p>
+              <p className="font-normal">
                 Etoeko International Edventures Ltd is a global education
                 company dedicated to making international education accessible
                 to students from every corner of the world. We specialize in
@@ -54,7 +54,7 @@ export default function About() {
                 institutions in the UK, US, and beyond.
               </p>
 
-              <p>
+              <p className="font-normal">
                 But we’re more than a recruitment agency we’re a change-driven
                 consultancy, working with education providers, businesses, and
                 governments to build inclusive, culturally agile, and
@@ -66,12 +66,12 @@ export default function About() {
               Global Reach, Local Expertise
             </h1>
             <div className=" flex flex-col gap-5 mt-4">
-              <p>
+              <p className="font-normal">
                 We connect students and institutions across borders with insight
                 into local challenges and aspirations.
               </p>
 
-              <p>
+              <p className="font-normal">
                 We believe education is a global language, but one that must be
                 spoken with local understanding. By bridging institutions,
                 cultures, and students across borders, we ensure that
@@ -87,12 +87,12 @@ export default function About() {
               Ethical, Student-Centric Recruitment
             </h1>
             <div className=" flex flex-col gap-5 mt-4">
-              <p>
+              <p className="font-normal">
                 Our processes are transparent, supportive, and driven by student
                 success, not just numbers.
               </p>
 
-              <p>
+              <p className="font-normal">
                 For us, recruitment is not about numbers—it’s about futures.
                 Every process we design is transparent, ethical, and built
                 around the individual student’s goals. We walk alongside
@@ -107,7 +107,7 @@ export default function About() {
               Inclusive by Design
             </h1>
             <div className=" flex flex-col gap-5 mt-4">
-              <p>
+              <p className="font-normal">
                 Inclusion isn’t an add-on; it’s embedded in our DNA. From the
                 way we write policies to the way we build partnerships, every
                 action is guided by a commitment to equity and belonging. We
@@ -122,12 +122,12 @@ export default function About() {
               Experienced & Mission-Led Team
             </h1>
             <div className=" flex flex-col gap-5 mt-4">
-              <p>
+              <p className="font-normal">
                 Our consultants and advisors come from diverse backgrounds in
                 higher education, international affairs, and cultural policy.
               </p>
 
-              <p>
+              <p className="font-normal">
                 Our strength lies in the people behind our mission. With
                 backgrounds spanning higher education, international relations,
                 cultural policy, and student advisory services, our team brings
@@ -142,17 +142,17 @@ export default function About() {
               Discover more
             </b>{" "}
             <ul className="gap-3 flex flex-col mt-2">
-              <li className="flex justify-start  max-md:text-xl items-center max-sm:font-normal">
+              <li className="flex lg:font-normal  justify-start  max-md:text-xl items-center max-sm:font-normal">
                 {" "}
                 <BiCaretUp className="text-4xl max-md:text-xl text-[#EF760C]" />{" "}
                 Our Services
               </li>
-              <li className="flex justify-start max-md:text-xl items-center max-sm:font-normal">
+              <li className="flex lg:font-normal  justify-start max-md:text-xl items-center max-sm:font-normal">
                 {" "}
                 <BiCaretUp className="text-4xl max-md:text-xl text-[#EF760C]" />{" "}
                 Testimonials
               </li>
-              <li className="flex justify-start max-md:text-xl items-center max-sm:font-normal">
+              <li className="flex lg:font-normal justify-start max-md:text-xl items-center max-sm:font-normal">
                 {" "}
                 <BiCaretUp className="text-4xl max-md:text-2xl text-[#EF760C]" />{" "}
                 Partner Institutions
@@ -162,7 +162,7 @@ export default function About() {
         </div>
       </section>
 
-      <div className="h-screen max-sm:h-auto  max-md:h-auto py-20 max-sm:py-2 max-md:py-5 relative justify-center flex  flex-col items-center">
+      <div className="lg:h-screen max-sm:h-auto  max-md:h-auto py-20 max-sm:py-2 max-md:py-5 relative justify-center flex  flex-col items-center">
         <h1 className="text-3xl mt-6">Our Sevices</h1>
         <section className="h-screen  max-sm:h-auto max-md:h-auto w-full flex gap-[30px] px-10 py-12 justify-between max-sm:flex-col   max-md:flex-col  items-center relative">
           {services.map(({ paragraph, header, img }) => (
@@ -171,26 +171,26 @@ export default function About() {
         </section>
       </div>
 
-      <section className="w-full h-[48rem] px-28 mb-20 max-sm:h-auto max-md:h-auto max-sm:px-2 max-md:px-4  max-sm:mb-14 max-md:mb-14 ">
+      <section className="w-full lg:h-auto lg:px-20 mb-20 max-sm:h-auto max-md:h-auto max-sm:px-2 max-md:px-4  max-sm:mb-14 max-md:mb-14 ">
         <div className="w-full h-full max-sm:h-auto max-md:h-auto  flex justify-between items-center rounded-lg laptop-bg p-2 max-sm:flex-col max-md:flex-col">
-          <div className="w-2/5 h-full p-20 rounded-lg bg-[#EF760C] max-sm:w-full max-md:w-full  max-sm:p-2 max-md:p-4">
-            <p className="text-3xl font-sans font-normal text-white">
-              Contact Information
+          <div className="w-2/5 h-full lg:p-20 rounded-lg bg-[#EF760C] max-sm:w-full max-md:w-full  max-sm:p-2 max-md:p-4">
+            <p className="lg:text-xl font-sans font-normal text-white ml-1 flex justify-start gap-4 items-center">
+              Contact Information <BiSolidArrowToRight className="inline" />
             </p>
 
-            <div className="w-full h-[24rem]  max-sm:h-auto max-md:h-auto flex justify-center  gap-5 flex-col items-center py-10 px-5">
+            <div className="w-full lg:h-[24rem] max-sm:py-4  max-sm:h-auto max-md:h-auto flex justify-start py-20  gap-5 flex-col items-center  px-2">
               <div className="flex gap-5 justify-start items-center  text-white w-full">
-                <BsTelephoneFill className="text-6xl text-white " />{" "}
+                <BsTelephoneFill className="lg:text-3xl text-white " />{" "}
                 <p className="font-8xl font-sans">+234 8140242752</p>
               </div>
 
               <div className="flex gap-5 justify-start items-center  text-white w-full">
-                <BsEnvelopeFill className="text-6xl text-white " />{" "}
+                <BsEnvelopeFill className="lg:text-3xl text-white " />{" "}
                 <p className="font-8xl font-sans">info@etoeko.co.uk</p>
               </div>
 
               <div className="flex gap-5 justify-start items-center  text-white w-full">
-                <MdShareLocation className="text-6xl text-white " />{" "}
+                <MdShareLocation className="lg:text-3xl text-white " />{" "}
                 <p className="font-8xl font-sans">London, Uk</p>
               </div>
             </div>
@@ -217,7 +217,7 @@ export default function About() {
                 </label>
               ))}
             </div>
-            <div className=" w-4/5 grid grid-cols-2 px-10 max-sm:px-2 max-md:px-4   max-sm:w-full max-md:w-full max-sm:grid-cols-1  gap-10 ">
+            <div className=" w-4/5 grid grid-cols-1 px-10 max-sm:px-2 max-md:px-4   max-sm:w-full max-md:w-full max-sm:grid-cols-1  gap-10 ">
               <label htmlFor="" className="flex flex-col p-1 w-full gap-2">
                 <b className="text-white font-medium text-xl font-sans">
                   Email
@@ -228,10 +228,7 @@ export default function About() {
                 />
               </label>
 
-              <label
-                htmlFor=""
-                className="flex flex-col p-1 w-full gap-2 mt-20"
-              >
+              <label htmlFor="" className="flex flex-col p-1 w-full gap-2 mt-5">
                 <b className="text-white font-medium text-xl font-sans">
                   Message
                 </b>
