@@ -1,7 +1,7 @@
 const PartnerWithUs = () => {
   return (
     <>
-      <section className="partner-w-us h-auto max-sm:h-auto max-md:-mt-10 flex justify-center items-center max-md:mb-10  mb-10 relative max-sm:w-full">
+      <section className="partner-w-us h-auto max-sm:h-auto max-md:-mt-10 max-sm:mt-10 flex justify-center items-center max-md:mb-10  mb-10 relative max-sm:w-full">
         <div className=" h-auto max-sm:h-auto max-md:h-auto w-4/5 max-sm:w-full flex gap-10 justify-center flex-col items-center">
           {" "}
           <h1 className="text-4xl font-medium max-sm:text-center font-sans">

@@ -76,13 +76,13 @@ const Footer = () => {
 
           <div className="relative h-auto  flex justify-evenly w-full px-8  items-start mt-40 max-sm:px-2 max-md:flex-col ">
             <div className=" flex justify-start flex-col w-1/4 h-auto px-8 max-sm:w-full max-md:w-full  max-sm:p-2 ">
-              <div className="w-5/6 px-10 -mt-5 max-sm:px-0 max-md:px-2 max-sm:w-full ">
+              <div className="lg:w-auto px-10 -mt-5 max-sm:px-0 max-md:px-2 max-sm:w-full ">
                 <img
                   src={logo}
                   alt=""
-                  className="w-full h-44 shadow-filter object-contain -ml-12 max-sm:-ml-6 max-md:-ml-40"
+                  className="w-full lg:h-auto shadow-filter object-contain  max-sm:-ml-6 max-md:-ml-40"
                 />{" "}
-                <p className="font-sans  font-medium text-white">
+                <p className="font-sans lg:text-sm  font-medium text-white">
                   We believe education should be accessible, inclusive, and
                   globally enriching. Whether you're a student dreaming of
                   studying abroad or an institution striving for a more
@@ -125,7 +125,7 @@ const Footer = () => {
             </div>
           </div>
 
-          <div className="relative h-1/3 max-md:w-full flex justify-evenly w-full px-14 items-end max-sm:px-2 max-sm:h-auto max-sm:flex-col max-md:flex-col ">
+          <div className="relative h-1/3 max-md:w-full flex justify-evenly w-full lg:px-14 items-end max-sm:px-2 max-sm:h-auto max-sm:flex-col max-md:flex-col ">
             <div className="w-[246px] h-[218px] max-sm:w-full max-md:w-full">
               <img
                 src={glassHouse}
@@ -134,10 +134,10 @@ const Footer = () => {
               />
             </div>
 
-            <div className="footer-img-container  w-1/4 h-auto p-10   px-8 max-sm:w-full max-md:w-full max-sm:p-2  max-md:p-5">
-              <div className=" w-full flex  items-end justify-center max-sm:justify-start gap-4  max-sm:gap-2">
-                <FaLocationDot className="text-6xl text-white max-sm:text-5xl" />
-                <p className="text-white font-sans ">
+             <div className="w-1/4 max-sm:w-full max-md:w-full flex justify-center items-end p-10 py-4 max-sm:p-2">
+              <div className=" w-full flex   items-end justify-center max-sm:justify-start gap-4  max-sm:gap-2">
+                <FaLocationDot className="lg:text-4xl text-white max-sm:text-4xl" />
+                <p className="text-white font-sans lg:text-sm ">
                   6th Floor, Park Royal, 2 Lake Drive, First Central 200 Abuja,
                   NW10 7FQ, Nigeria.{" "}
                 </p>
@@ -146,7 +146,7 @@ const Footer = () => {
 
             <div className="w-1/4 max-sm:w-full max-md:w-full flex justify-center items-end p-10 py-4 max-sm:p-2">
               <div className=" w-full flex  items-center justify-center gap-4 max-sm:justify-start  max-md:justify-start max-sm:-ml-2 max-md:-ml-10 ">
-                <HiMailOpen className="text-6xl text-white max-sm:text-4xl" />
+                <HiMailOpen className="lg:text-4xl text-white max-sm:text-4xl" />
                 <p className="text-white font-sans">info@etoeko.com.uk</p>
               </div>
             </div>

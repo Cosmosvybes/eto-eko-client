@@ -23,10 +23,10 @@ is equipped to support them meaningfully.`,
 
   return (
     <>
-      <div className="h-screen px-32  relative max-md:px-10 max-sm:px-0 max-sm:h-auto max-sm:mb-5 ">
+      <div className="lg:h-screen px-32  relative md:px-10 max-sm:px-0 sm:h-auto sm:mb-5 ">
 
 
-        <div className="h-screen max-md:h-full  max-sm:h-auto max-sm:w-full flex justify-center px-10 py-10 core-bg max-sm:bg-cover max-sm:bg-scroll max-sm:px-0 max-sm:flex-col">
+        <div className="lg:h-screen max-md:h-full  max-sm:h-auto max-sm:w-full flex justify-center px-10 py-10 core-bg max-sm:bg-cover max-sm:bg-scroll max-sm:px-0 max-sm:flex-col">
           <div className="w-[493px] h-[147px] flex  items-center  py-5 flex-col max-sm:w-full">
             <h1 className="text-4xl font-bold">Our Core</h1>
             <h2 className="text-2xl text-center font-sans font-normal">
@@ -34,12 +34,12 @@ is equipped to support them meaningfully.`,
             </h2>
           </div>
 
-          <div className="absolute max-sm:relative  w-full  bottom-0 h-[600px] max-sm:h-auto max-md:h-auto py-10 px-10 mt-5  max-md:mt-0 max-sm:px-2 max-md:px-20 flex justify-between max-sm:flex-col max-md:flex-col z-10 max-sm:z-0 gap-8 max-sm:gap-4">
+          <div className="absolute max-sm:relative  w-full   h-[600px] max-sm:h-auto max-md:h-auto py-10 px-10  lg:mt-24  max-md:mt-0 max-sm:px-2 max-md:px-20 flex justify-between max-sm:flex-col max-md:flex-col z-10 max-sm:z-0 gap-8 max-sm:gap-4">
             {values.map(({ id, header, content }, i) => (
               <div
                 className={`w-1/3 ${
-                  i % 2 === 0 ? "h-[490px]" : "h-[550px]"
-                } flex px-10 justify-center gap-3 max-md:h-[16rem]  max-sm:h-auto max-sm:rounded-lg  max-sm:py-10  max-md:rounded-lg  items-center flex-col z-20 max-sm:w-full max-md:w-full bg-[#EF760C33]`}
+                  i % 2 === 0 ? "lg:h-3/4" : "lg:h-4/5"
+                } flex px-10 justify-center gap-3 md:h-[16rem]  max-sm:h-auto max-sm:rounded-lg  max-sm:py-10  max-md:rounded-lg  items-center flex-col z-20 max-sm:w-full max-md:w-full bg-[#EF760C33]`}
                 key={id}
               >
                 <h1 className="text-3xl font-bold text-[#FF7700]">{header}</h1>

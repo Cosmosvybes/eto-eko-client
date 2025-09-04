@@ -19,8 +19,8 @@ const Navbar = () => {
 
   return (
     <>
-      <header className="lg:h-auto  p-2 sm:h-ato md:h-auto  lg:sticky sticky sm:sticky md:sticky  left-0 right-0 top-0 z-10 bg-[rgba(255, 119, 0, 0.35)]">
-        <div className="shadow-glass rounded-lg border-none backdrop-blur-xs flex justify-between items-center px-5 max-md:px-0 max-sm:px-0">
+      <header className="lg:h-auto  lg:p-2 sm:h-ato md:h-auto  lg:sticky sticky sm:sticky md:sticky  left-0 right-0 top-0 z-10 bg-[rgba(255, 119, 0, 0.35)]">
+        <div className="shadow-glass rounded-lg border-none backdrop-blur-xs flex justify-between items-center lg:px-5 max-md:px-0 max-sm:px-0">
           <span>
             {" "}
             <img
@@ -30,7 +30,7 @@ const Navbar = () => {
             />{" "}
           </span>
 
-          <nav className="w-1/3 md:w-3/4 flex justify-center gap-8 items-center lg:flex  max-md:hidden sm:hidden">
+          <nav className="w-1/3 md:w-3/4 flex justify-center lg:gap-4 items-center lg:flex  max-md:hidden sm:hidden">
             {NAVMENU.map(({ name, path }) => (
               <Link
                 key={name}

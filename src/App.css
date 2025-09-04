@@ -160,7 +160,7 @@ span {
 
 .hover-animate:hover #offerHeader {
   transition: transform 0.4s ease-in;
-  transform: translateY(-100px);
+  transform: translateY(-90px);
 }
 .hover-animate #brief {
   opacity: 1;

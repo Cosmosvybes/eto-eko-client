@@ -1,14 +1,14 @@
 const LetsShape = () => {
   return (
     <>
-      <section className="h-screen mt-16  px-18 max-sm:px-2 max-sm:h-auto max-md:h-auto ">
-        <div className="plane-bg flex justify-between mt-10 items-center rounded-lg max-md:flex-col  max-sm:flex-col">
-          <div className="w-1/2 h-full  flex justify-start items-center p-10 max-sm:p-2 max-sm:w-full max-md:w-full  max-md:h-auto">
+      <section className="lg:h-auto mt-16  px-18 max-sm:px-2 max-sm:h-auto max-md:h-auto ">
+        <div className="plane-bg flex justify-between mt-10 items-start rounded-lg max-md:flex-col  max-sm:flex-col">
+          <div className="w-1/2 h-full  flex justify-start items-start p-10 max-sm:p-2 max-sm:w-full max-md:w-full  max-md:h-auto">
             <div className=" w-3/4 h-1/2 flex justify-start flex-col p-5 max-sm:p-0.5 gap-4 max-sm:w-full max-md:w-full  max-md:h-auto max-sm:h-auto">
-              <h1 className="font-bold text-5xl text-white font-sans">
+              <h1 className="font-bold lg:text-3xl text-white font-sans">
                 Let's Shape Your{" "}
               </h1>
-              <h1 className="font-bold text-5xl text-white font-sans">
+              <h1 className="font-bold lg:text-3xl text-white font-sans">
                 Academic Future{" "}
               </h1>
 
@@ -44,7 +44,7 @@ const LetsShape = () => {
                   className="flex flex-col w-full p-5 max-sm:p-2 gap-4"
                   key={id}
                 >
-                  <b className="text-white font-medium text-xl font-sans">
+                  <b className="text-white font-medium lg:text-sm font-sans">
                     {name}
                   </b>
                   <input
@@ -67,7 +67,7 @@ const LetsShape = () => {
                   className="flex flex-col w-full p-5 max-sm:p-2 gap-14"
                   key={id}
                 >
-                  <b className="text-white font-medium text-xl font-sans">
+                  <b className="text-white font-medium lg:text-sm font-sans">
                     {name}
                   </b>
                   <input
