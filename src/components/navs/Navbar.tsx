@@ -19,8 +19,8 @@ const Navbar = () => {
 
   return (
     <>
-      <header className="lg:h-20  p-2 sm:h-24 md:h-44  lg:sticky sticky sm:sticky md:sticky  left-0 right-0 top-0 z-10 bg-[rgba(255, 119, 0, 0.35)]">
-        <div className="shadow-glass border-none backdrop-blur-xs flex justify-between items-center px-5 max-md:px-0 max-sm:px-0">
+      <header className="lg:h-auto  p-2 sm:h-ato md:h-auto  lg:sticky sticky sm:sticky md:sticky  left-0 right-0 top-0 z-10 bg-[rgba(255, 119, 0, 0.35)]">
+        <div className="shadow-glass rounded-lg border-none backdrop-blur-xs flex justify-between items-center px-5 max-md:px-0 max-sm:px-0">
           <span>
             {" "}
             <img
