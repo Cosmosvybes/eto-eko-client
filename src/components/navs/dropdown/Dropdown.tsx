@@ -1,4 +1,5 @@
 import { BiCaretDown, BiCaretRight } from "react-icons/bi";
+import { Link } from "react-router-dom";
 
 const Dropdown = ({
   header,
@@ -6,12 +7,14 @@ const Dropdown = ({
   isOpen,
   handleOpenDropDown,
   isClosedNav,
+  handleOpenCloseNav,
 }: {
   header: string;
-  children?: string[];
+  children?: { title: string; link: string }[];
   isOpen: boolean;
   isClosedNav: boolean;
   handleOpenDropDown(): void;
+  handleOpenCloseNav(): void;
 }) => {
   return (
     <>
@@ -45,10 +48,11 @@ const Dropdown = ({
                 : " opacity-0 invisble h-0"
             }`}
           >
-            {children.map((link) => (
+            {children.map(({ title, link }) => (
               <li key={link} className="text-[#074941]">
-                {" "}
-                {link}
+                <Link to={link} onClick={() => handleOpenCloseNav()}>
+                  {title}
+                </Link>
               </li>
             ))}
           </ul>

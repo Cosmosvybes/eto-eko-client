@@ -24,7 +24,7 @@ const DynamicHero = ({
               {/* Learn more about Etoeko. */}
             </p>
 
-            <hr className="border-t border-black  w-full mt-2" />
+            <hr className="border-t border-black border-dashed  w-full mt-4" />
 
             <div className="w-full flex justify-center items-center mt-2">
               <p className="w-1/2 font-light">Follow us</p>

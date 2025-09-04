@@ -13,10 +13,24 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isOpenDropDown, setIsOpenDropDown] = useState(false);
   const handleOpenNavMenu = () => setIsOpen(!isOpen);
-  const handlIsOpenDropDown = () => {
-    setIsOpenDropDown(!isOpenDropDown);
-  };
 
+  const handlIsOpenDropDown = () => setIsOpenDropDown(!isOpenDropDown);
+  const [MENU] = useState([
+    {
+      header: "Events",
+    },
+    {
+      header: "Quick links",
+      children: [
+        { title: "About Us", link: "/about-us" },
+        { title: "Our Services", link: "/our-services" },
+        { title: "Our Team", link: "/our-team" },
+        { title: "Testimonials", link: "/testimonials" },
+        { title: "Offices", link: "/our-offices" },
+        { title: "Study Destinations", link: "study-destinations" },
+      ],
+    },
+  ]);
   return (
     <>
       <header className="lg:h-auto  lg:p-2 sm:h-ato md:h-auto  lg:sticky sticky sm:sticky md:sticky  left-0 right-0 top-0 z-10 bg-[rgba(255, 119, 0, 0.35)]">
@@ -69,23 +83,9 @@ const Navbar = () => {
                 : " delay-700 opacity-0 duration-1000 invisible scale-0"
             }  w-full transition duration-800  gap-5 flex justify-center items-center flex-col`}
           >
-            {[
-              {
-                header: "Events",
-              },
-              {
-                header: "About Us",
-                children: [
-                  "Our Services",
-                  "Our Team",
-                  "Testimonials",
-                  "Partner Institutions",
-                  "Our Offices",
-                  "Study Destinations",
-                ],
-              },
-            ].map(({ header, children }) => (
+            {MENU.map(({ header, children }) => (
               <Dropdown
+                handleOpenCloseNav={handleOpenNavMenu}
                 isClosedNav={isOpen}
                 key={header}
                 header={header}
