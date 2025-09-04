@@ -34,7 +34,7 @@ const Navbar = () => {
             {NAVMENU.map(({ name, path }) => (
               <Link
                 key={name}
-                className="text-black font-medium font-sans text-xl  transition-all duration-300 group-hover:w-full group-hover:left-0"
+                className="text-black font-medium font-sans lg:text-[16px]  transition-all duration-300 group-hover:w-full group-hover:left-0"
                 to={path!}
               >
                 {name}
@@ -42,7 +42,7 @@ const Navbar = () => {
             ))}
           </nav>
           <span>
-            <p className="text-2xl max-sm:text-sm max-sm:hidden max-md:hidden font-medium font-sans">
+            <p className="lg:text-[16px] max-sm:text-sm max-sm:hidden max-md:hidden font-medium font-sans">
               info@gmail.com
             </p>
           </span>
