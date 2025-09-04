@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { BiCaretDown } from "react-icons/bi";
 
 const Testimonials = () => {
   const [testimonials] = useState([
@@ -33,22 +34,22 @@ my future.`,
   ]);
   return (
     <>
-      <div className="h-screen max-sm:h-auto max-md:h-auto  flex justify-start px-18 items-center py-16 flex-col mt-10 max-sm:px-0 max-sm:py-4">
+      <div className="h-screen max-sm:h-auto max-md:h-auto  max-h-lvw:h-auto flex justify-start px-18 items-center py-16 flex-col mt-10 max-sm:px-0 max-sm:py-4">
         <h1 className="text-4xl">Testimonials</h1>
 
         <div className="h-auto w-full   grid grid-cols-3 gap-5 mt-14 max-sm:grid-cols-1 max-md:grid-cols-1 max-sm:px-2">
           {testimonials.map(({ name, country, message, discipline }, i) => (
             <div className=" w-full relative " key={i}>
               <div
-                className={` h-[36rem] rounded-lg  flex justify-center items-center bg-[#FF7700] relative ${
-                  i % 2 === 1 ? "rotate-x-180" : "rotate-0"
+                className={`h-[32rem] rounded-lg  flex justify-center items-center bg-[#FF7700] relative ${
+                  i % 2 === 0 ? "rotate-x-180" : "rotate-0"
                 }  `}
               >
-                <div className="relative w-3/4 max-sm:w-[20rem] max-sm:h-[20rem] max-sm:px-0 -z-20 flex justify-center items-center rounded-full h-3/4 place-items-center bg-white right-3.5 max-sm:right-0 top-2">
-                  <div className="w-full h-44  absolute place-content-center  ">
+                <div className="relative w-2/3 p-3 max-sm:w-[20rem] max-sm:h-[20rem] max-sm:px-0  flex justify-center items-center rounded-full h-2/3 place-items-center bg-amber-600 right-3.5 max-sm:right-0 top-2">
+                  <div className="w-full h-full bg-white rounded-full relative p-10 border-2 border-dashed border-amber-600 ">
                     <p
-                      className={`justify-self-center p-10 max-sm:py-2 font-sans  max-sm:text-sm text-center  ${
-                        i % 2 === 1 ? "rotate-x-180" : "rotate-0"
+                      className={`justify-self-center p-1  max-sm:py-2 font-sans  max-sm:text-sm text-center  ${
+                        i % 2 === 0 ? "rotate-x-180" : "rotate-0"
                       }  `}
                     >
                       {message}
@@ -56,7 +57,7 @@ my future.`,
                   </div>
                 </div>
 
-                <div className="absolute w-44 rounded-2xl max-sm:w-24  bottom-1 -rotate-270 h-36  max-sm:h-44  max-sm:bottom-2  bg-white right-32  max-sm:rotate-180 max-sm:right-28"></div>
+                <div className="absolute w-28 rounded-2xl max-sm:w-24  -bottom-3  h-36  max-sm:h-28  max-sm:bottom-2  bg-white right-44  max-sm:rotate-180 max-sm:right-28"></div>
               </div>
 
               <div className="h-24 flex justify-center items-center flex-col z-10  mt-2 gap-2">
@@ -70,8 +71,8 @@ my future.`,
           ))}
         </div>
 
-        <button className=" px-3 w-44 max-sm:w-[150px] py-4 mt-7 bg-[#FF7700] text-white rounded-full">
-          See More
+        <button className=" px-3 w-44 max-sm:w-[150px] py-4 mt-7 bg-[#FF7700] flex justify-center items-center gap-2 text-white rounded-full">
+          See More <BiCaretDown className="inline" />
         </button>
       </div>
     </>
