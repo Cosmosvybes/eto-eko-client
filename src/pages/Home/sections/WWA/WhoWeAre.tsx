@@ -1,7 +1,7 @@
 const WhoWeAre = () => {
   return (
     <>
-      <section className="h-screen flex justify-between max-sm:flex-col max-sm:items-start  mt-25 max-md:mt-0 px-10 gap-10 max-sm:gap-7 max-sm:px-5 max-sm:h-auto">
+      <section className=" lg:h-auto flex justify-between max-sm:flex-col max-sm:items-start  mt-25 max-md:mt-0 px-10 gap-10 max-sm:gap-7 max-sm:px-5 max-sm:h-auto">
         <div className=" w-3/6 who-we-are-bg max-sm:w-full max-sm:h-[24rem] bg-scroll max-sm:bg-fixed max-sm:bg-cover max-sm:rounded-lg"></div>
 
         <div className=" w-3/6 flex justify-center max-sm:w-full  items-start flex-col gap-12 max-sm:gap-6 max-sm:items-start">

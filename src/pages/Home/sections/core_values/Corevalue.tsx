@@ -24,7 +24,7 @@ is equipped to support them meaningfully.`,
   return (
     <>
       <div className="lg:h-auto px-32  relative md:px-10 max-sm:px-0 sm:h-auto sm:mb-5 ">
-        <div className="lg:h-screen max-md:h-full  max-sm:h-auto max-sm:w-full flex justify-center px-10 py-10 core-bg max-sm:bg-cover max-sm:bg-scroll max-sm:px-0 max-sm:flex-col">
+        <div className="lg:h-[44rem] mb-10 max-md:h-full  max-sm:h-auto max-sm:w-full flex justify-center px-10 py-10 core-bg max-sm:bg-cover max-sm:bg-scroll max-sm:px-0 max-sm:flex-col">
           <div className="w-[493px] h-[147px] flex  items-center  py-5 flex-col max-sm:w-full">
             <h1 className="text-4xl font-bold">Our Core</h1>
             <h2 className="text-2xl text-center font-sans font-normal">
