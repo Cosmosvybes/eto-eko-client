@@ -91,13 +91,13 @@ Consulting.`,
         </p>
         <div className=" lg:h-full lg:w-full grid grid-cols-3 max-sm:grid-cols-1  max-md:grid-cols-1 max-sm:mt-2 lg:p-5  gap-5  md:p-3 sm:p-3">
           {offers.map(({ header, content, fullContent, icon }, i) => (
-            <div className="w-full   lg:p-5" key={i}>
+            <div className="w-full max-md:p-3   lg:p-5" key={i}>
               <div
                 className={`lg:w-full ${
                   i % 2 !== 0
                     ? "bg-[#FF7700] text-white"
                     : "bg-white text-black"
-                } shadow-lg shadow-gray-200 max-sm:p-3 h-full max-sm:h-auto max-sm:w-full lg:h-full  max-md:w-full rounded-lg gap-5 lg:p-5 flex justify-center items-start flex-col hover-animate`}
+                } shadow-lg shadow-gray-200 max-sm:p-3 h-full max-sm:h-auto max-sm:w-full lg:h-full max-md:p-3   max-md:w-full rounded-lg gap-5 lg:p-5 flex justify-center items-start flex-col hover-animate`}
               >
                 {icon}
                 <h1 className="text-xl font-sans " id="offerHeader">

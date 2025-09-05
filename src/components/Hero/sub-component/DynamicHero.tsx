@@ -13,7 +13,7 @@ const DynamicHero = ({
 }) => {
   return (
     <>
-      <div className="lg:h-screen flex relative  max-md:h-auto   justify-between items-center max-sm:h-auto max-sm:items-start max-sm:flex-col">
+      <div className="lg:h-[44rem] flex relative  max-md:h-auto  max-sm:py-10 justify-between items-center max-sm:h-auto max-sm:items-start max-sm:flex-col">
         <div className="lg:w-2/5 flex gap-3 justify-center items-center max-sm:w-full max-md:w-full">
           <div className="lg:w-2/3  lg:h-2/3 px-10 max-sm:w-full max-sm:px-2  max-md:px-2 ">
             <h1 className="lg:text-[3rem] max-md:text-[2rem] text-[#FF7700] ">

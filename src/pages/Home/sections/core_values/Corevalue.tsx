@@ -23,8 +23,8 @@ is equipped to support them meaningfully.`,
 
   return (
     <>
-      <div className="lg:h-auto px-32  relative md:px-10 max-sm:px-0 sm:h-auto sm:mb-5 ">
-        <div className="lg:h-[44rem] mb-10 max-md:h-full  max-sm:h-auto max-sm:w-full flex justify-center px-10 py-10 core-bg max-sm:bg-cover max-sm:bg-scroll max-sm:px-0 max-sm:flex-col">
+      <div className="lg:h-auto px-32 max-md:h-auto  relative max-md:px-10 max-sm:px-0 sm:h-auto sm:mb-5 ">
+        <div className="lg:h-[44rem] mb-10  max-sm:h-auto max-md:h-[44rem] max-sm:w-full flex justify-center px-10 py-10 core-bg max-sm:bg-cover max-sm:bg-scroll max-sm:px-0 max-sm:flex-col">
           <div className="w-[493px] h-[147px] flex  items-center  py-5 flex-col max-sm:w-full">
             <h1 className="text-4xl font-bold">Our Core</h1>
             <h2 className="text-2xl text-center font-sans font-normal">
@@ -32,7 +32,7 @@ is equipped to support them meaningfully.`,
             </h2>
           </div>
 
-          <div className="absolute max-sm:relative  w-full   h-[600px] max-sm:h-auto max-md:h-auto py-10 px-10  lg:mt-24  max-md:mt-0 max-sm:px-2 max-md:px-20 flex justify-between max-sm:flex-col max-md:flex-col z-10 max-sm:z-0 gap-8 max-sm:gap-4">
+          <div className="absolute max-sm:relative  w-full max-md:mt-24  h-[600px] max-sm:h-auto max-md:h-auto py-10 px-10  lg:mt-24 max-sm:px-2 max-md:px-20 flex justify-between max-sm:flex-col max-md:flex-col max-sm:z-0 gap-8 max-sm:gap-4">
             {values.map(({ id, header, content }, i) => (
               <div
                 className={`w-1/3 ${

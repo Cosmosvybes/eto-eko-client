@@ -20,7 +20,7 @@ const Dropdown = ({
     <>
       <div className="w-full  flex gap-2  h-auto flex-col justify-center items-start px-24">
         <button
-          className="text-[#074941] border-none flex justify-center font-bold font-sans items-center  gap-2  text-2xl"
+          className="text-[#074941] border-none flex justify-center font-bold font-sans items-center  gap-2  text-md"
           onClick={handleOpenDropDown}
         >
           {header}
@@ -49,7 +49,7 @@ const Dropdown = ({
             }`}
           >
             {children.map(({ title, link }) => (
-              <li key={link} className="text-[#074941]">
+              <li key={link} className="text-[#074941] text-sm">
                 <Link to={link} onClick={() => handleOpenCloseNav()}>
                   {title}
                 </Link>

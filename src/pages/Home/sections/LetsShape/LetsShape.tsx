@@ -5,10 +5,10 @@ const LetsShape = () => {
         <div className="plane-bg flex justify-between mt-10 items-start rounded-lg max-md:flex-col  max-sm:flex-col">
           <div className="w-1/2 h-full  flex justify-start items-start p-10 max-sm:p-2 max-sm:w-full max-md:w-full  max-md:h-auto">
             <div className=" w-3/4 h-1/2 flex justify-start flex-col p-5 max-sm:p-0.5 gap-4 max-sm:w-full max-md:w-full  max-md:h-auto max-sm:h-auto">
-              <h1 className="font-bold lg:text-3xl text-white font-sans">
+              <h1 className="font-bold lg:text-3xl max-sm:text-2xl text-white font-sans">
                 Let's Shape Your{" "}
               </h1>
-              <h1 className="font-bold lg:text-3xl text-white font-sans">
+              <h1 className="font-bold lg:text-3xl max-sm:text-2xl text-white font-sans">
                 Academic Future{" "}
               </h1>
 

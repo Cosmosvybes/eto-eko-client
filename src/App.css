@@ -55,6 +55,7 @@ span {
 }
 
 .hero-bg {
+  border: none;
   background-image: url("./assets/etooeko.jpg");
   background-position: center;
   background-repeat: no-repeat;

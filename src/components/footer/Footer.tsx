@@ -82,7 +82,7 @@ const Footer = () => {
                   alt=""
                   className="w-full lg:h-auto shadow-filter object-contain  max-sm:-ml-6 max-md:-ml-40"
                 />{" "}
-                <p className="font-sans lg:text-sm  font-medium text-white">
+                <p className="font-sans lg:text-sm  lg:font-thin font-medium text-white">
                   We believe education should be accessible, inclusive, and
                   globally enriching. Whether you're a student dreaming of
                   studying abroad or an institution striving for a more
@@ -93,51 +93,66 @@ const Footer = () => {
             </div>
 
             <div className="footer-img-container  w-1/4 h-auto p-10   px-8 max-sm:w-full max-md:w-full max-sm:p-2  ">
-              <h1 className="text-xl font-extrabold font-sans text-white">
+              <strong className="text-xl font-extrabold font-sans text-white">
                 {subMenus[0].header}
-              </h1>
-              <ul className="flex flex-col gap-10 mt-10  max-sm:mt-2 max-md:mt-3  max-sm:gap-5  ">
+              </strong>
+              <ul className="flex flex-col gap-10 mt-10  max-sm:mt-2 max-md:mt-3  max-sm:gap-5  max-sm:px-1">
                 {subMenus[0].children.map((link) => (
-                  <li key={link} className="cursor-pointer text-white">{link}</li>
+                  <li
+                    key={link}
+                    className="cursor-pointer text-white font-thin "
+                  >
+                    {link}
+                  </li>
                 ))}
               </ul>
             </div>
 
             <div className="footer-img-container  w-1/4 h-auto p-10   px-8 max-sm:w-full max-md:w-full max-sm:p-2  ">
-              <h1 className="text-xl font-extrabold font-sans text-white">
+              <strong className="text-xl font-extrabold font-sans text-white">
                 {subMenus[1].header}
-              </h1>
-              <ul className="flex flex-col gap-10 mt-10  max-sm:mt-2 max-md:mt-3 max-sm:gap-5 ">
+              </strong>
+              <ul className="flex flex-col gap-10 mt-10  max-sm:mt-2 max-md:mt-3  max-sm:gap-5  max-sm:px-1">
                 {subMenus[1].children.map((link) => (
-                  <li key={link} className="cursor-pointer text-white">{link}</li>
+                  <li
+                    key={link}
+                    className="cursor-pointer text-white font-thin "
+                  >
+                    {link}
+                  </li>
                 ))}
               </ul>
             </div>
             <div className="footer-img-container  w-1/4 h-auto p-10   px-8 max-sm:w-full max-md:w-full max-sm:p-2  ">
-              <h1 className="text-xl font-extrabold font-sans text-white">
+              <strong className="text-xl font-extrabold font-sans text-white">
                 {subMenus[2].header}
-              </h1>
-              <ul className="flex flex-col gap-10 mt-10  max-sm:mt-2 max-md:mt-3 max-sm:gap-5 ">
+              </strong>
+              <ul className="flex flex-col gap-10 mt-10  max-sm:mt-2 max-md:mt-3  max-sm:gap-5  max-sm:px-1">
                 {subMenus[2].children.map((link) => (
-                  <li key={link} className="cursor-pointer text-white">{link}</li>
+                  <li
+                    key={link}
+                    className="cursor-pointer text-white font-thin "
+                  >
+                    {link}
+                  </li>
                 ))}
               </ul>
             </div>
           </div>
 
-          <div className="relative h-1/3 max-md:w-full flex justify-evenly w-full lg:px-14 items-end max-sm:px-2 max-sm:h-auto max-sm:flex-col max-md:flex-col ">
-            <div className="w-[246px] h-[218px] max-sm:w-full max-md:w-full">
+          <div className="relative h-1/3 max-sm:mb-5 max-sm:mt-5 max-md:w-full flex justify-evenly w-full  lg:px-14 items-end max-sm:px-2 max-sm:h-auto max-sm:flex-col max-md:flex-col ">
+            <div className="w-[246px] h-[218px] max-md:h-full max-sm:px-0 max-sm:w-full max-md:w-full max-md:px-14 max-md:mb-2 max-md:rounded-lg">
               <img
                 src={glassHouse}
                 alt="complex-building"
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover max-md:object-cover max-md:w-full"
               />
             </div>
 
-             <div className="w-1/4 max-sm:w-full max-md:w-full flex justify-center items-end p-10 py-4 max-sm:p-2">
-              <div className=" w-full flex   items-end justify-center max-sm:justify-start gap-4  max-sm:gap-2">
-                <FaLocationDot className="lg:text-4xl text-white max-sm:text-4xl" />
-                <p className="text-white font-sans lg:text-sm ">
+            <div className="w-1/4 max-sm:w-full max-md:w-full max-md:p-1 flex justify-center items-end p-10 py-4 max-sm:p-2">
+              <div className=" w-full flex   items-end justify-center max-sm:justify-start gap-4 max-md:-ml-1  max-sm:gap-2">
+                <FaLocationDot className="lg:text-4xl text-white max-sm:text-4xl max-md:text-4xl" />
+                <p className="text-white font-sans lg:text-sm max-sm:font-thin">
                   6th Floor, Park Royal, 2 Lake Drive, First Central 200 Abuja,
                   NW10 7FQ, Nigeria.{" "}
                 </p>
@@ -145,14 +160,14 @@ const Footer = () => {
             </div>
 
             <div className="w-1/4 max-sm:w-full max-md:w-full flex justify-center items-end p-10 py-4 max-sm:p-2">
-              <div className=" w-full flex  items-center justify-center gap-4 max-sm:justify-start  max-md:justify-start max-sm:-ml-2 max-md:-ml-10 ">
-                <HiMailOpen className="lg:text-4xl text-white max-sm:text-4xl" />
+              <div className=" w-full flex  items-center justify-center gap-4 max-sm:justify-start  max-md:justify-start max-sm:-ml-2  ">
+                <HiMailOpen className="lg:text-4xl max-md:text-4xl text-white max-sm:text-4xl" />
                 <p className="text-white font-sans">info@etoeko.com.uk</p>
               </div>
             </div>
 
             <div className="w-1/4 max-sm:w-full max-md:w-full  flex justify-center items-end p-10 max-sm:p-0 py-4 max-sm:mt-4">
-              <div className=" w-full flex  items-center justify-start gap-6 max-sm:gap-3 max-md:-ml-5 max-sm:ml-2 ">
+              <div className=" w-full flex  items-center justify-start gap-6 max-sm:gap-3 max-md:-ml-0 max-sm:ml-2 ">
                 <FaFacebook className="text-3xl text-white" />
                 <FaLinkedin className="text-3xl text-white" />
                 <FaInstagram className="text-3xl text-white" />
@@ -162,7 +177,7 @@ const Footer = () => {
             </div>
           </div>
 
-          <div className=" w-full  bg-[#FF7700] mt-10  px-16 max-sm:px-2">
+          <div className=" w-full  bg-[#FF7700] mt-10  px-16 max-sm:px-2 max-md:px-12">
             <div className="w-full border-b border-white"></div>
             <div className="h-auto  flex justify-between items-center gap-2 mt-5 max-sm:flex-col">
               <div className=" w-2/6 max-sm:w-full  font-sans flex justify-center items-center text-white">
@@ -172,10 +187,14 @@ const Footer = () => {
                 </p>
               </div>
               <div className=" w-4/6 max-sm:w-full max-sm:mb-4  p-2 max-sm:p-0">
-                <div className="flex justify-end items-center gap-10 max-sm:flex-col max-md:flex-col max-sm:gap-2 max-sm:items-start">
+                <div className="flex justify-end items-center gap-10 max-sm:flex-col max-md:flex-col max-md:gap-5 max-sm:gap-2 max-sm:items-start">
                   {["Terms of use", "Cookie policy", "Privacy policy"].map(
                     (text) => (
-                      <Link key={text} to={"#"} className="font-sans text-xl text-white">
+                      <Link
+                        key={text}
+                        to={"#"}
+                        className="font-sans text-xl text-white"
+                      >
                         {text}
                       </Link>
                     )

@@ -173,7 +173,7 @@ export default function About() {
 
       <section className="w-full lg:h-auto lg:px-20 mb-20 max-sm:h-auto max-md:h-auto max-sm:px-2 max-md:px-4  max-sm:mb-14 max-md:mb-14 ">
         <div className="w-full h-full max-sm:h-auto max-md:h-auto  flex justify-between items-center rounded-lg laptop-bg p-2 max-sm:flex-col max-md:flex-col">
-          <div className="w-2/5 h-full lg:p-20 rounded-lg bg-[#EF760C] max-sm:w-full max-md:w-full  max-sm:p-2 max-md:p-4">
+          <div className="w-2/5 h-full lg:p-20 rounded-lg bg-[#EF760C] max-sm:w-full max-md:w-full max-sm:h-1/2  max-sm:p-2 max-md:p-4">
             <p className="lg:text-xl font-sans font-normal text-white ml-1 flex justify-start gap-4 items-center">
               Contact Information <BiSolidArrowToRight className="inline" />
             </p>

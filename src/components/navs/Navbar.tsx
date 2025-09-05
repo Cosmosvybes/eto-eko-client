@@ -33,14 +33,15 @@ const Navbar = () => {
   ]);
   return (
     <>
-      <header className="lg:h-auto  lg:p-2 sm:h-ato md:h-auto  lg:sticky sticky sm:sticky md:sticky  left-0 right-0 top-0 z-10 bg-[rgba(255, 119, 0, 0.35)]">
-        <div className="shadow-glass rounded-lg border-none backdrop-blur-xs flex justify-between items-center lg:px-5 max-md:px-0 max-sm:px-0">
+      <header className="lg:h-auto  lg:p-2 sm:h-auto md:h-auto  lg:sticky sticky max-sm:sticky max-md:sticky max-md:left-0 max-md:right-0  top-0 z-10 bg-[rgba(255, 119, 0, 0.35)]">
+        <div className="max-md:w-full  border-none backdrop-blur-xs flex justify-between items-center lg:px-5 max-md:px-0 max-sm:px-0">
           <span>
             {" "}
             <img
+              onClick={() => location.assign("/")}
               src={logo}
               alt=""
-              className="w-60 h-32 object-contain max-sm:w-full max-sm:h-auto"
+              className="w-60 lg:h-32 object-contain max-sm:w-full max-sm:h-auto"
             />{" "}
           </span>
 
@@ -68,7 +69,7 @@ const Navbar = () => {
         </div>
 
         <div
-          className={`fixed bottom-0 top-0 w-full flex flex-col justify-start py-12 items-start left-0 h-auto max-md:h-screen right-0 ${
+          className={`fixed bottom-0 top-0 w-full flex flex-col justify-start  items-start left-0 h-auto max-md:h-screen right-0 ${
             isOpen
               ? "visible opacity-100 scale-3d"
               : "invisible duration-1000  opacity-0 scale-50 "
@@ -77,7 +78,7 @@ const Navbar = () => {
           } bottom-0 bg-amber-600`}
         >
           <div
-            className={` py-5  ${
+            className={` py-20  ${
               isOpen
                 ? " delay-700 opacity-100 scale-3d visible"
                 : " delay-700 opacity-0 duration-1000 invisible scale-0"
@@ -108,11 +109,11 @@ const Navbar = () => {
           <div
             className={` w-full flex flex-col justify-center items-center px-4  ${
               isOpen
-                ? "delay-1000 opacity-100 h-[250px] visible"
+                ? "delay-1000 opacity-100 h-[250px] max-md:h-[300px] visible"
                 : "delay-100 opacity-0 invisible h-0"
             } transition-all duration-1000   absolute bottom-0 bg-[#074941]`}
           >
-            <div className="footer-img-container  w-1/4 h-auto p-10   px-8 max-sm:w-full max-md:w-full max-sm:p-2  max-md:p-5">
+            <div className="footer-img-container  w-1/4 h-auto p-10   max-sm:w-full max-md:w-full max-sm:p-2  max-md:p-5">
               <div className=" w-full flex  items-end justify-center max-sm:justify-start gap-4  max-sm:gap-2">
                 <FaLocationDot className="text-6xl text-white max-sm:text-5xl" />
                 <p className="text-white font-sans max-sm:text-sm ">
@@ -142,7 +143,9 @@ const Navbar = () => {
                 <RiTwitterXFill className="text-3xl text-white" />
                 <FaYoutube className="text-3xl text-white" />
               </div>
-              <p className="text-sm ml-3 text-white">Connect with us</p>
+              <p className="text-sm font-thin ml-3 text-white">
+                Connect with us
+              </p>
             </div>
           </div>
         </div>
