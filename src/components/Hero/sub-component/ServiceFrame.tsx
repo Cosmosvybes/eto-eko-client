@@ -1,4 +1,4 @@
-
+import { motion } from "framer-motion";
 const ServiceFrame = ({
   header,
   paragraph,
@@ -10,7 +10,12 @@ const ServiceFrame = ({
 }) => {
   return (
     <>
-      <div className=" w-2/4 h-auto  max-sm:w-full max-md:w-full gap-[13px] mt-2  flex flex-col items-center justify-start">
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ type: "tween", ease: "backIn", duration: 0.5 }}
+        className=" w-2/4 h-auto  max-sm:w-full max-md:w-full gap-[13px] mt-2  flex flex-col items-center justify-start"
+      >
         <div className="">
           <img
             src={imgFile}
@@ -27,7 +32,7 @@ const ServiceFrame = ({
             Explore
           </button>
         </div>
-      </div>
+      </motion.div>
     </>
   );
 };

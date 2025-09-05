@@ -6,6 +6,7 @@ import { GoSearch } from "react-icons/go";
 import ServiceFrame from "./sub-component/ServiceFrame";
 import { useState } from "react";
 import { SERVICE_IMAGES } from "../constants";
+import { motion, AnimatePresence } from "framer-motion";
 
 const Hero = () => {
   const [services] = useState([
@@ -67,18 +68,31 @@ const Hero = () => {
             <div className="linear-bg lg:w-5/7 h-full flex justify-between   p-24 max-sm:p-0 max-sm:items-start  max-md:items-start  items-center max-sm:w-full max-md:w-full ">
               <div className="relative h-[auto] gap-18 max-sm:mt-10  max-sm:gap-5 w-[538px] max-sm:w-full max-md:w-full max-md:p-2  lg:p-[20px] max-sm:p-5">
                 <label htmlFor="" className="relative">
-                  <input
-                    type="text"
-                    className="w-full  p-4 px-4 rounded-4xl ml-2 outline-none text-xl bg-gray-100 border-amber-600 max-sm:px-2"
-                    placeholder="Search here ..."
-                  />
-                  <GoSearch className="absolute text-3xl right-8  top-0   max-sm:top-0 max-sm:right-4 text-amber-300" />
+                  <AnimatePresence>
+                    <motion.input
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      transition={{ duration: 1, ease: "easeIn" }}
+                      type="text"
+                      className="w-full  p-4 px-4 rounded-4xl ml-2 outline-none text-xl bg-gray-100 border-amber-600 max-sm:px-2"
+                      placeholder="Search here ..."
+                    />
+                    <GoSearch className="absolute text-3xl right-8  top-0   max-sm:top-0 max-sm:right-4 text-amber-300" />
+                  </AnimatePresence>
                 </label>
 
                 <div className="relative w-full mt-10 ml-2 ">
-                  <h1 className="font-sans font-extrabold text-6xl max-sm:text-4xl text-[#FF7700]">
-                    Empowering Global Education & Inclusion.
-                  </h1>
+                  <AnimatePresence>
+                    <motion.h1
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1, y: 10 }}
+                      transition={{ duration: 0.5, ease: "easeIn" }}
+                      exit={{ y: -10 }}
+                      className="font-sans font-extrabold text-6xl max-sm:text-4xl text-[#FF7700]"
+                    >
+                      Empowering Global Education & Inclusion.
+                    </motion.h1>
+                  </AnimatePresence>
                 </div>
 
                 <div className="w-full mt-10">
