@@ -34,7 +34,7 @@ const ServiceCard = () => {
           transition={{ type: "tween", ease: "backIn", duration: 1 }}
           className="text-4xl font-medium max-sm:text-center font-sans max-sm:text-2xl"
         >
-          Who We Are !
+          Our Services
         </motion.h1>{" "}
         <section className="lg:h-screen  max-sm:h-auto max-md:h-auto w-full flex gap-[30px] px-10 py-12 justify-between max-sm:flex-col   max-md:flex-col  items-center relative">
           {services.map(({ paragraph, header, img }) => (
