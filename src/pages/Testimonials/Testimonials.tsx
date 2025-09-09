@@ -15,7 +15,7 @@ const Testimonials = () => {
   const [testimonials] = useState([
     {
       id: 1,
-      user: "Put Ankeet Singh",
+      user: "Adenike Folashade",
       country: "Nigeria",
       degree:
         "Master’s Student in Public Health at York St john University, UK.",
@@ -31,11 +31,11 @@ const Testimonials = () => {
     },
     {
       id: 2,
-      user: "Put Ankeet Singh",
-      country: "Nigeria",
+      user: "Gandaki, Karnali",
+      country: "Nepal",
       degree:
         "Master’s Student in Public Health at York St john University, UK.",
-      p1: `Coming from Nigeria, I was worried about whether studying abroad
+      p1: `Coming from Nepal, I was worried about whether studying abroad
                 would align with my career back home. Their team not only helped
                 me secure admission but also guided me on how my studies could
                 address real challenges in my community. It felt like they
@@ -48,10 +48,10 @@ const Testimonials = () => {
     {
       id: 3,
       user: "Put Ankeet Singh",
-      country: "Nigeria",
+      country: "India",
       degree:
         "Master’s Student in Public Health at York St john University, UK.",
-      p1: `Coming from Nigeria, I was worried about whether studying abroad
+      p1: `Coming from India, I was worried about whether studying abroad
                 would align with my career back home. Their team not only helped
                 me secure admission but also guided me on how my studies could
                 address real challenges in my community. It felt like they
@@ -63,11 +63,11 @@ const Testimonials = () => {
     },
     {
       id: 4,
-      user: "Put Ankeet Singh",
-      country: "Nigeria",
+      user: " Lumbini Madhesh",
+      country: "Nepal",
       degree:
         "Master’s Student in Public Health at York St john University, UK.",
-      p1: `Coming from Nigeria, I was worried about whether studying abroad
+      p1: `Coming from Nepal, I was worried about whether studying abroad
                 would align with my career back home. Their team not only helped
                 me secure admission but also guided me on how my studies could
                 address real challenges in my community. It felt like they
@@ -119,11 +119,11 @@ const Testimonials = () => {
                 Testimonials
               </h1>
               <div className="gap-2 flex flex-col mt-2 ">
-                {testimonials.map(({ user, country, degree, p1, p2 }) => (
+                {testimonials.map(({ user, country, p1, p2 }) => (
                   <TestimonialMessage
                     user={user}
                     country={country}
-                    degree={degree}
+                    // degree={degree}
                     p1={p1}
                     p2={p2}
                   />
