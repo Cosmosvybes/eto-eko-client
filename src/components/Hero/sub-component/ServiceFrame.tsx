@@ -45,7 +45,7 @@ const ServiceFrame = ({
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               transition={{ type: "tween", ease: "backIn", duration: 0.5 }}
-              className="w-1/4 place-self-end border border-[#EF760C]"
+              className="w-1/4 h-2 place-self-end  bg-[#EF760C]"
             ></motion.span>
           </div>
 
