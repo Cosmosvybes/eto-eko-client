@@ -74,7 +74,7 @@ const Hero = () => {
                       animate={{ opacity: 1 }}
                       transition={{ duration: 1, ease: "easeIn" }}
                       type="text"
-                      className="w-full  p-4 px-4 rounded-4xl ml-2 outline-none text-xl bg-gray-100 border-amber-600 max-sm:px-2"
+                      className="w-full  p-4 px-4 rounded-4xl ml-2 outline-none font-normal bg-gray-100 border-amber-600 max-sm:px-2"
                       placeholder="Search here ..."
                     />
                     <GoSearch className="absolute text-3xl right-8  top-0   max-sm:top-0 max-sm:right-4 text-amber-300" />
