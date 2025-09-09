@@ -31,7 +31,7 @@ const ServiceFrame = ({
         </div>
 
         <div className="h-[230px] max-sm:h-auto max-sm:w-3/4  max-md:w-1/2  flex-col flex justify-center gap-5 items-center  max-sm:items-end max-md:items-end">
-          <div className="flex gap-1  items-start flex-col justify-center">
+          <div className="flex gap-1  items-start  flex-col justify-center">
             {" "}
             <motion.h1
               initial={{ opacity: 0 }}
@@ -45,7 +45,7 @@ const ServiceFrame = ({
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               transition={{ type: "tween", ease: "backIn", duration: 0.5 }}
-              className="w-1/4 h-0.5 place-self-end  bg-[#EF760C]"
+              className="w-1/4 h-0.5 place-self-end lg:place-self-center lg:mt-2  bg-[#EF760C]"
             ></motion.span>
           </div>
 

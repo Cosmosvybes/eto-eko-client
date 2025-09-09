@@ -3,7 +3,7 @@ export const NAVMENU = [
   { name: "About", path: "/about-us" },
   { name: "Our Service", path: "/our-services" },
   { name: "Testimonials", path: "/testimonials" },
-  { name: "Partners", path: "/partners" },
+  // { name: "Partners", path: "/partners" },
 ];
 
 import joinedHands from "../../assets/hands.jpg";

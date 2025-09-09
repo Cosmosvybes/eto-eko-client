@@ -25,9 +25,9 @@ const Navbar = () => {
         { title: "About Us", link: "/about-us" },
         { title: "Our Services", link: "/our-services" },
         { title: "Testimonials", link: "/testimonials" },
-        { title: "Our Team", link: "/our-team" },
-        { title: "Offices", link: "/our-offices" },
-        { title: "Study Destinations", link: "study-destinations" },
+        // { title: "Our Team", link: "/our-team" },
+        // { title: "Offices", link: "/our-offices" },
+        // { title: "Study Destinations", link: "study-destinations" },
       ],
     },
   ]);
@@ -49,7 +49,7 @@ const Navbar = () => {
             {NAVMENU.map(({ name, path }) => (
               <Link
                 key={name}
-                className="text-black font-medium font-sans lg:text-[16px]  transition-all duration-300 group-hover:w-full group-hover:left-0"
+                className="text-black lg:p-2 lg:w-auto text-center font-medium lg:rounded-lg font-sans lg:text-[16px] hover:bg-[#074941] hover:text-white  transition duration-400 group-hover:w-full group-hover:left-0"
                 to={path!}
               >
                 {name}
@@ -57,9 +57,13 @@ const Navbar = () => {
             ))}
           </nav>
           <span>
-            <p className="lg:text-[16px] max-sm:text-sm max-sm:hidden max-md:hidden font-medium font-sans">
-              info@gmail.com
-            </p>
+            <div className="w-20  max-sm:hidden max-md:hidden flex-col items-center justify-start">
+              <MdEmail
+                className={`text-4xl text-[#074941]  transition duration-500  max-sm:hidden max-md:hidden`}
+                // onClick={handleOpenNavMenu}
+              />
+              <p className="text-xs text-[#074941]">email us</p>
+            </div>
           </span>
 
           <div className="flex justify-end items-end  ">
