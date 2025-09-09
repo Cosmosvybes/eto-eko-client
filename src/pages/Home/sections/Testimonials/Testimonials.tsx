@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const Testimonials = () => {
   const [testimonials] = useState([
     {
-      name: "Put Ankheet Singh",
+      name: "Adenike Folashade",
 
       message: `Coming from Nigeria, I was worried about whether studying
                       abroad would align with my career back home. Their team
@@ -36,10 +36,12 @@ my future.`,
   return (
     <>
       <div className="h-auto max-sm:h-auto max-md:h-auto  max-h-lvw:h-auto flex justify-start px-18 items-center py-16 flex-col mt-10 max-sm:px-0 max-sm:py-4">
-        <h1       className="text-4xl font-medium max-sm:text-center font-sans max-sm:text-2xl">Testimonials</h1>
+        <h1 className="text-4xl font-medium max-sm:text-center font-sans max-sm:text-2xl">
+          Testimonials
+        </h1>
 
         <div className="h-auto w-full   grid grid-cols-3 gap-5 mt-14 max-sm:grid-cols-1 max-md:grid-cols-1 max-sm:px-2">
-          {testimonials.map(({ name, country, message, discipline }, i) => (
+          {testimonials.map(({ name, country, message }, i) => (
             <div className=" w-full relative " key={i}>
               <div
                 className={`lg:h-[32rem] rounded-lg flex justify-center items-center bg-[#FF7700] relative ${
@@ -64,9 +66,9 @@ my future.`,
               <div className="h-24 flex justify-center items-center flex-col z-10  mt-2 gap-2">
                 <b className="font-bold font-2xl font-sans">{name}</b>
                 <h2 className="font-medium">{country}</h2>
-                <p className="font-sans font-normal max-sm:text-center">
+                {/* <p className="font-sans font-normal max-sm:text-center">
                   {discipline}
-                </p>
+                </p> */}
               </div>
             </div>
           ))}

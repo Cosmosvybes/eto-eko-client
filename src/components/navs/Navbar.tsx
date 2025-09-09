@@ -6,7 +6,7 @@ import { useState } from "react";
 import { MdCloseFullscreen, MdEmail } from "react-icons/md";
 import { FaLocationDot } from "react-icons/fa6";
 import { HiMailOpen } from "react-icons/hi";
-import { FaFacebook, FaInstagram, FaLinkedin, FaYoutube } from "react-icons/fa";
+import { FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa";
 import Dropdown from "./dropdown/Dropdown";
 
 const Navbar = () => {
@@ -158,7 +158,6 @@ const Navbar = () => {
                 <FaLinkedin className="text-3xl text-white" />
                 <FaInstagram className="text-3xl text-white" />
                 <RiTwitterXFill className="text-3xl text-white" />
-                <FaYoutube className="text-3xl text-white" />
               </div>
               <p className="text-sm font-thin ml-3 text-white">
                 Connect with us

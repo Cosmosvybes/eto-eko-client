@@ -22,11 +22,11 @@ const ServiceFrame = ({
         transition={{ type: "tween", ease: "backIn", duration: 0.5 }}
         className=" w-2/4 h-auto  max-sm:flex-row max-md:flex-row max-sm:w-full max-md:w-full gap-[13px] mt-2  max-sm:gap-0  flex flex-col items-center justify-start max-sm:justify-between  max-md:justify-between  max-md:items-start max-sm:items-start"
       >
-        <div className="">
+        <div    className=" relative bg-[#074941]  rounded-full rounded-bl-none  w-[246px] h-[224px] max-sm:w-24 max-sm:h-24">
           <img
             src={imgFile}
             alt="service photo"
-            className="object-cover  rounded-full rounded-bl-none  w-[246px] h-[224px] max-sm:w-24 max-sm:h-24"
+            className="object-cover absolute bottom-2 rounded-full rounded-bl-none  w-[246px] h-[224px] max-sm:w-24 max-sm:h-24"
           />
         </div>
 
