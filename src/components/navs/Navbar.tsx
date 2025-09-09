@@ -3,7 +3,7 @@ import { NAVMENU } from "../constants";
 import logo from "../../assets/logo.png";
 import { RiMenu2Fill, RiTwitterXFill } from "react-icons/ri";
 import { useState } from "react";
-import { MdCloseFullscreen } from "react-icons/md";
+import { MdCloseFullscreen, MdEmail } from "react-icons/md";
 import { FaLocationDot } from "react-icons/fa6";
 import { HiMailOpen } from "react-icons/hi";
 import { FaFacebook, FaInstagram, FaLinkedin, FaYoutube } from "react-icons/fa";
@@ -62,10 +62,23 @@ const Navbar = () => {
             </p>
           </span>
 
-          <RiMenu2Fill
-            className={`text-4xl text-[#074941] mr-5 transition duration-500 hidden max-sm:block max-md:block`}
-            onClick={handleOpenNavMenu}
-          />
+          <div className="flex justify-end items-end  ">
+            <div className="w-20 hidden max-sm:flex max-md:flex flex-col items-center justify-start">
+              <MdEmail
+                className={`text-2xl text-[#074941]  transition duration-500 hidden max-sm:block max-md:block`}
+                // onClick={handleOpenNavMenu}
+              />
+              <p className="text-xs text-[#074941]">email us</p>
+            </div>
+
+            <div className="w-20 hidden max-sm:flex max-md:flex flex-col items-center justify-start">
+              <RiMenu2Fill
+                className={`text-2xl text-[#074941]  transition duration-500 hidden max-sm:block max-md:block`}
+                onClick={handleOpenNavMenu}
+              />
+              <p className="text-xs text-[#074941]">menu</p>
+            </div>
+          </div>
         </div>
 
         <div
