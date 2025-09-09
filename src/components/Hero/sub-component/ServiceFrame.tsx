@@ -22,13 +22,18 @@ const ServiceFrame = ({
         transition={{ type: "tween", ease: "backIn", duration: 0.5 }}
         className=" w-2/4 h-auto  max-sm:flex-row max-md:flex-row max-sm:w-full max-md:w-full gap-[13px] mt-2  max-sm:gap-0  flex flex-col items-center justify-start max-sm:justify-between  max-md:justify-between  max-md:items-start max-sm:items-start"
       >
-        <div    className=" relative bg-[#074941]  rounded-full rounded-bl-none  w-[246px] h-[224px] max-sm:w-24 max-sm:h-24">
+        <motion.div  
+         initial={{ opacity: 0, scale: 0 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{ type: "tween", ease: "backIn", duration: 1 }}
+        
+        className=" relative bg-[#074941]  rounded-full rounded-bl-none  w-[246px] h-[224px] max-sm:w-24 max-sm:h-24">
           <img
             src={imgFile}
             alt="service photo"
             className="object-cover absolute bottom-2 rounded-full rounded-bl-none  w-[246px] h-[224px] max-sm:w-24 max-sm:h-24"
           />
-        </div>
+        </motion.div>
 
         <div className="h-[230px] max-sm:h-auto max-sm:w-3/4  max-md:w-1/2  flex-col flex justify-center gap-5 items-center  max-sm:items-end max-md:items-end">
           <div className="flex gap-1  items-start  flex-col justify-center">
