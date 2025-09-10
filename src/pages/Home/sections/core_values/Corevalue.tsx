@@ -28,8 +28,8 @@ is equipped to support them meaningfully.`,
         <div className="lg:h-[44rem] mb-10  max-sm:h-auto max-md:h-[44rem] max-sm:w-full flex justify-center px-10 py-10 core-bg max-sm:bg-cover max-sm:bg-scroll max-sm:px-0 max-sm:flex-col">
           <div className="w-[493px] h-[147px] flex  items-center  py-5 flex-col max-sm:w-full">
             <motion.h1
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
               transition={{ type: "tween", ease: "easeIn", duration: 0.5 }}
               className="text-4xl text-[#074941] font-bold"
             >
@@ -48,8 +48,8 @@ is equipped to support them meaningfully.`,
           <div className="absolute max-sm:relative  w-full max-md:mt-24 max-sm:mt-0  h-[600px] max-sm:h-auto max-md:h-auto py-10 px-10  lg:mt-24 max-sm:px-2 max-md:px-20 flex justify-between max-sm:flex-col max-md:flex-col max-sm:z-0 gap-8 max-sm:gap-4">
             {values.map(({ id, header, content }, i) => (
               <motion.div
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
+                initial={{ opacity: 0, y: 20, scale: 0 }}
+                whileInView={{ opacity: 1, y: 0, scale: 1 }}
                 transition={{ type: "tween", ease: "anticipate", duration: 1 }}
                 className={`w-1/3 ${
                   i % 2 === 0 ? "lg:h-3/4" : "lg:h-4/5"

@@ -33,7 +33,12 @@ const Hero = () => {
   return (
     <>
       <main className="relative  border-none  w-full max-sm:mt-0 max-sm:h-auto max-md:h-auto">
-        <div className="lg:h-screen  hero-bg w-full  flex  justify-between items-center max-sm:p-0 max-sm:h-[38rem]">
+        <motion.div
+          initial={{ x: -30, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          transition={{ duration: 0.5, type: "tween", ease: "backIn" }}
+          className="lg:h-screen  hero-bg w-full  flex  justify-between items-center max-sm:p-0 max-sm:h-[38rem]"
+        >
           <div className="w-[10%] h-full bg-white border-none ">
             <div className="relative   w-full h-auto flex-col gap-8 flex py-3 mt-3  max-sm:px-4 items-center">
               <FaFacebook className="text-4xl max-sm:text-2xl text-[#074941]" />
@@ -70,9 +75,15 @@ const Hero = () => {
                 <label htmlFor="" className="relative">
                   <AnimatePresence>
                     <motion.input
-                      initial={{ opacity: 0 }}
-                      animate={{ opacity: 1 }}
-                      transition={{ duration: 1, ease: "easeIn" }}
+                      initial={{ opacity: 0, scale: 0 }}
+                      whileInView={{ opacity: 1, scale: 1 }}
+                      transition={{
+                        type: "tween",
+                        ease: "backIn",
+                        duration: 1,
+                      }}
+                      // animate={{ opacity: 1 }}
+                      // transition={{ duration: 1, ease: "easeIn" }}
                       type="text"
                       className="w-full  p-4 px-4 rounded-4xl ml-2 outline-none font-normal bg-gray-100 border-amber-600 max-sm:px-2"
                       placeholder="Search here ..."
@@ -110,7 +121,7 @@ const Hero = () => {
               </div>
             </div>
           </div>
-        </div>
+        </motion.div>
       </main>
 
       {/* <ServiceCard /> */}

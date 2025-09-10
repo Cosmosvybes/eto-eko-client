@@ -1,21 +1,34 @@
-import { useEffect, useState } from "react";
-import { quickContactUrl } from "../../components/constants";
+import { useState } from "react";
 import toast from "react-hot-toast";
-import { motion, useScroll, useSpring, useTransform } from "framer-motion";
+import { inquiryUrl } from "../../../../components/constants";
 
-export function useAboutController() {
+export const useLetsShapeController = () => {
   const [loading, setLoading] = useState(false);
 
-  const formFields = [
-    { id: 1, name: "fullname", type: "text", value: "" },
-    { id: 2, name: "phone", type: "text", value: "" },
+  const formFields_1 = [
+    { id: 1, name: "Firstname", type: "text", value: "" },
+    { id: 2, name: "Lastname", type: "text", value: "" },
+    { id: 3, name: "E-mail", type: "email", value: "" },
+    { id: 4, name: "Your current Location", type: "text", value: "" },
+    { id: 5, name: "Country You Wish to Study In", type: "text", value: "" },
+    { id: 6, name: "University of Interest", type: "text", value: "" },
   ];
 
   const formFields_2 = [
-    { id: 1, name: "email", type: "text", value: "" },
-    { id: 2, name: "message", type: "textarea", value: "" },
+    {
+      id: 7,
+      name: "How do you plan to fund your studies ?",
+      type: "text",
+      value: "",
+    },
+    {
+      id: 8,
+      name: "Do you have any question before we contact you ?",
+      type: "text",
+      value: "",
+    },
   ];
-  const values_1 = formFields.reduce((acc, curr) => {
+  const values_1 = formFields_1.reduce((acc, curr) => {
     return { ...acc, [curr.name]: curr.value };
   }, {});
 
@@ -33,49 +46,35 @@ export function useAboutController() {
     const hasUnfilledInput = Object.values(formValues).find(
       (textInput) => textInput == ""
     );
+    // console.log(hasUnfilledInput, formValues);
 
     if (hasUnfilledInput == "") {
       toast("Missing input area");
       return;
     }
-
     try {
       setLoading(true);
-      const response = await fetch(quickContactUrl, {
+      const response = await fetch(inquiryUrl, {
         method: "POST",
         headers: { "Content-Type": "Application/json" },
         body: JSON.stringify({ ...formValues }),
       });
       const result = await response.json();
       console.log(result);
-      toast(result.response);
+      toast(result.responseMessage);
       setLoading(false);
     } catch (error) {
       setLoading(false);
-      toast("Operation failed, try again");
+      toast("Connection error");
     }
   };
-  useEffect(() => {
-    scrollTo({ top: 0, behavior: "smooth" });
-  }, []);
-
-  const { scrollYProgress } = useScroll();
-  const scaleX = useSpring(scrollYProgress);
-  const background = useTransform(
-    scaleX,
-    [0, 1],
-    ["rgba(7, 73, 65, 1)", "rgba(255, 119, 0, 1)"]
-  );
 
   return {
-    formFields,
+    formFields_1,
+    formFields_2,
     handleFormChange,
     handleFormSubmit,
-    formValues,
     loading,
-    formFields_2,
-    background,
-    scaleX,
-    motion,
+    formValues,
   };
-}
+};

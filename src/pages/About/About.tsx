@@ -1,18 +1,17 @@
 import PartnerWithUs from "../Home/sections/PartnerWithUs/PartnerWithUs";
 import Footer from "../../components/footer/Footer";
-import { useEffect } from "react";
 
 import { BiCaretUp } from "react-icons/bi";
-
 import { BsEnvelopeFill, BsTelephoneFill } from "react-icons/bs";
 
 import { MdShareLocation } from "react-icons/md";
 import DynamicHero from "../../components/Hero/sub-component/DynamicHero";
-import { motion, useScroll, useSpring, useTransform } from "framer-motion";
+
 import Formbuilder from "../../components/Formbuilder/Formbuilder";
 import { useAboutController } from "./controller";
 import ServiceCard from "../../components/ServicesCard/ServiceCard";
 import { FaLongArrowAltRight } from "react-icons/fa";
+import { Toaster } from "react-hot-toast";
 
 export default function About() {
   const {
@@ -21,22 +20,22 @@ export default function About() {
     handleFormSubmit,
     formValues,
     formFields_2,
-  } = useAboutController();
-
-  useEffect(() => {
-    scrollTo({ top: 0, behavior: "smooth" });
-  }, []);
-
-  const { scrollYProgress } = useScroll();
-  const scaleX = useSpring(scrollYProgress);
-  const background = useTransform(
+    loading,
     scaleX,
-    [0, 1],
-    ["rgba(7, 73, 65, 1)", "rgba(255, 119, 0, 1)"]
-  );
+    background,
+    motion
+  } = useAboutController();
 
   return (
     <>
+      {loading && (
+        <div className="w-full h-full flex justify-center items-center z-20 fixed top-0 right-0 left-0 bg-[rgba(0,0,0,0.4)]">
+          <div className="loader"></div>
+        </div>
+      )}
+
+      <Toaster />
+
       <div className="h-auto">
         <motion.div
           style={{

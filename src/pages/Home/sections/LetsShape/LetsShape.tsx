@@ -1,50 +1,26 @@
-import { useState } from "react";
 import Formbuilder from "../../../../components/Formbuilder/Formbuilder";
+import { Toaster } from "react-hot-toast";
+
+import { useLetsShapeController } from "./controller";
 
 const LetsShape = () => {
-  const formFields_1 = [
-    { id: 1, name: "Firstname", type: "text", value: "" },
-    { id: 2, name: "Lastname", type: "text", value: "" },
-    { id: 3, name: "E-mail", type: "email", value: "" },
-    { id: 4, name: "Your current Location", type: "text", value: "" },
-    { id: 5, name: "Country You Wish to Study In", type: "text", value: "" },
-    { id: 6, name: "University of Interest", type: "text", value: "" },
-  ];
-
-  const formFields_2 = [
-    {
-      id: 7,
-      name: "How do you plan to fund your studies ?",
-      type: "text",
-      value: "",
-    },
-    {
-      id: 8,
-      name: "Do you have any question before we contact you ?",
-      type: "text",
-      value: "",
-    },
-  ];
-  const values_1 = formFields_1.reduce((acc, curr) => {
-    return { ...acc, [curr.name]: curr.value };
-  }, {});
-
-  const values_2 = formFields_2.reduce((acc, curr) => {
-    return { ...acc, [curr.name]: curr.value };
-  }, {});
-
-  const [formValues, setFormValues] = useState({ ...values_1, ...values_2 });
-
-  const handleFormChange = (newValue: string, name: string) => {
-    setFormValues((prev) => ({ ...prev, [name]: newValue }));
-  };
-
-  const handleFormSubmit = () => {
-    console.log(formValues);
-  };
-
+  const {
+    loading,
+    formFields_1,
+    formFields_2,
+    handleFormChange,
+    handleFormSubmit,
+    formValues,
+  } = useLetsShapeController();
   return (
     <>
+      {loading && (
+        <div className="w-full h-full flex justify-center items-center z-20 fixed top-0 right-0 left-0 bg-[rgba(0,0,0,0.4)]">
+          <div className="loader"></div>
+        </div>
+      )}
+
+      <Toaster />
       <section className="lg:h-auto mt-16  max-md:px-10 px-18 max-sm:px-2 max-sm:h-auto max-md:h-auto ">
         <div className="plane-bg flex justify-between mt-10 items-start rounded-lg max-md:flex-col  max-sm:flex-col">
           <div className="w-1/2 h-full  flex justify-start items-start p-10 max-sm:p-2 max-sm:w-full max-md:w-full  max-md:h-auto">

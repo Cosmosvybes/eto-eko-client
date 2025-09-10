@@ -121,7 +121,10 @@ Consulting.`,
               className="w-full max-md:p-3   lg:p-5"
               key={i}
             >
-              <div
+              <motion.div
+                initial={{ opacity: 0, x: -20,  }}
+                whileInView={{ opacity: 1, x: 0,  }}
+                transition={{ type: "tween", ease: "backIn", duration: 0.7 }}
                 className={`lg:w-full ${
                   i % 2 !== 0
                     ? "bg-[#FF7700] text-[#074941]"
@@ -149,7 +152,7 @@ Consulting.`,
                     Learn more
                   </Link>
                 </div>
-              </div>
+              </motion.div>
             </motion.div>
           ))}
         </motion.div>
