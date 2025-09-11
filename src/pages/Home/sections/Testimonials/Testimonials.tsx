@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { BiCaretDown } from "react-icons/bi";
 import { Link } from "react-router-dom";
-
+import { motion } from "framer-motion";
 const Testimonials = () => {
   const [testimonials] = useState([
     {
@@ -42,7 +42,13 @@ my future.`,
 
         <div className="h-auto w-full   grid grid-cols-3 gap-5 mt-14 max-sm:grid-cols-1 max-md:grid-cols-1 max-sm:px-2">
           {testimonials.map(({ name, country, message }, i) => (
-            <div className=" w-full relative " key={i}>
+            <motion.div
+              initial={{ opacity: 0, x: -150 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5, type: "tween", ease: "backIn" }}
+              className=" w-full relative "
+              key={i}
+            >
               <div
                 className={`lg:h-[32rem] rounded-lg flex justify-center items-center bg-[#FF7700] relative ${
                   i % 2 === 0 ? "rotate-x-180" : "rotate-0"
@@ -59,18 +65,13 @@ my future.`,
                     </p>
                   </div>
                 </div>
-
-                {/* <div className="absolute w-28 rounded-2xl max-sm:w-24  -bottom-3  h-36  max-sm:h-28  max-sm:bottom-2  bg-white right-44  max-sm:rotate-180 max-sm:right-28"></div> */}
               </div>
 
               <div className="h-24 flex justify-center items-center flex-col z-10  mt-2 gap-2">
                 <b className="font-bold font-2xl font-sans">{name}</b>
                 <h2 className="font-medium">{country}</h2>
-                {/* <p className="font-sans font-normal max-sm:text-center">
-                  {discipline}
-                </p> */}
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
 

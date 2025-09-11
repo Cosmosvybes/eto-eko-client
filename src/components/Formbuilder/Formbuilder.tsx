@@ -18,7 +18,7 @@ const Formbuilder = ({
           <label
             key={name}
             htmlFor=""
-            className="flex flex-col lg:ml-4 w-full gap-2 mt-5"
+            className="flex flex-col lg:ml-4 w-full gap-2 mt-5 max-sm:ml-1"
           >
             <b className="text-white font-medium text-xl font-sans">Message</b>
             <textarea
