@@ -1,7 +1,7 @@
 import { RiTwitterXFill } from "react-icons/ri";
 import { FaFacebook } from "react-icons/fa";
 import { FiInstagram } from "react-icons/fi";
-import { SiLinkedin, SiYoutube } from "react-icons/si";
+import { SiLinkedin,  } from "react-icons/si";
 import { GoSearch } from "react-icons/go";
 import ServiceFrame from "./sub-component/ServiceFrame";
 import { useState } from "react";
@@ -37,7 +37,7 @@ const Hero = () => {
           initial={{ x: -30, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
           transition={{ duration: 0.5, type: "tween", ease: "backIn" }}
-          className="lg:h-screen  hero-bg w-full  flex  justify-between items-center max-sm:p-0 max-sm:h-[38rem]"
+          className="lg:h-screen  hero-bg w-full  flex  justify-between items-center max-sm:p-0 max-sm:h-[40rem]"
         >
           <div className="w-[10%] h-full bg-white border-none ">
             <div className="relative   w-full h-auto flex-col gap-8 flex py-3 mt-3  max-sm:px-4 items-center">
@@ -45,7 +45,7 @@ const Hero = () => {
               <SiLinkedin className="text-4xl max-sm:text-2xl text-[#074941]" />
               <FiInstagram className="text-4xl max-sm:text-2xl text-[#074941]" />
               <RiTwitterXFill className="text-4xl max-sm:text-2xl text-[#074941]" />
-              <SiYoutube className="text-4xl max-sm:text-2xl  text-[#074941] " />
+             
             </div>
 
             <div className="relative w-full h-auto justify-center flex ">

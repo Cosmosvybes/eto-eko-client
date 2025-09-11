@@ -28,18 +28,17 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
   return (
     <>
       <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.5, type: "tween", ease: "backIn" }}
         exit={{ opacity: 0 }}
         className={`fixed z-30 flex ${
-          !showFeedBack ? "invisble scale-0 delay-1000" : "scale-100 visible"
+          !showFeedBack
+            ? "invisble translate-y-11/12 scale-0 opacity-0 inset-0 delay-1000"
+            : "scale-100  visible"
         }  justify-center items-center top-0 bottom-0 right-0 transition duration-700 left-0 bg-[rgba(0,0,0,0.18)] max-sm:py-20 max-md:px-5 max-sm:px-2`}
       >
-        <motion.div className="lg:w-2/3 bg-amber-600 rounded-lg lg:h-2/3 max-sm:w-full flex p-1 py-20 justify-center items-center flex-col relative  max-md:w-full max-sm:h-11/12">
+        <motion.div className="lg:w-2/3 bg-amber-600 rounded-lg lg:h-2/3 max-sm:w-full flex p-1 py-20 justify-center items-center flex-col relative  max-md:w-full max-sm:h-auto">
           <MdCloseFullscreen
             onClick={() => setShowFeedBack(!showFeedBack)}
-            className="absolute top-2.5 right-2.5 text-3xl"
+            className="absolute top-5 right-2.5 text-3xl"
           />
 
           <div className="w-full p-2  flex-col mb-5">
@@ -67,9 +66,9 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
       <div>
         <Outlet /> {children}
         <div
-          className={`fixed justify-center z- transition duration-300 ${
+          className={`fixed justify-center  transition duration-300 ${
             showFeedBack ? "invisble scale-0" : "scale-100 visible"
-          }   rounded-lg flex flex-col bottom-10 right-0 w-44 border-[#074941] border-5 h-auto items-center bg-amber-600`}
+          }   rounded-lg flex flex-col bottom-10  w-44 border-[#074941] border-5 h-auto items-center bg-amber-600 right-2`}
         >
           <p className="text-white text-sm">give us</p>
           <motion.button

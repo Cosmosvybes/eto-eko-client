@@ -23,7 +23,7 @@ export default function About() {
     loading,
     scaleX,
     background,
-    motion
+    motion,
   } = useAboutController();
 
   return (
@@ -77,33 +77,69 @@ export default function About() {
                 </motion.h1>{" "}
               </div>
               <div className=" flex flex-col gap-5 mt-4">
-                <p className="font-normal">
+                <motion.p
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  transition={{
+                    type: "keyframes",
+                    ease: "circInOut",
+                    duration: 0.5,
+                  }}
+                  className="font-normal"
+                >
                   Etoeko International Edventures Ltd is a global education
                   company dedicated to making international education accessible
                   to students from every corner of the world. We specialize in
                   recruiting students around the world from countries like
                   Nigeria, India, and Nepal into prestigious higher education
                   institutions in the UK, US, and beyond.
-                </p>
+                </motion.p>
 
-                <p className="font-normal">
+                <motion.p
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  transition={{
+                    type: "keyframes",
+                    ease: "circInOut",
+                    duration: 0.5,
+                  }}
+                  className="font-normal"
+                >
                   But we’re more than a recruitment agency we’re a change-driven
                   consultancy, working with education providers, businesses, and
                   governments to build inclusive, culturally agile, and
                   policy-informed educational environments.
-                </p>
+                </motion.p>
               </div>
 
               <h1 className="text-[24px] font-semibold mt-5">
                 Global Reach, Local Expertise
               </h1>
               <div className=" flex flex-col gap-5 mt-4">
-                <p className="font-normal">
+                <motion.p
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  transition={{
+                    type: "keyframes",
+                    ease: "circInOut",
+                    duration: 0.5,
+                  }}
+                  className="font-normal"
+                >
                   We connect students and institutions across borders with
                   insight into local challenges and aspirations.
-                </p>
+                </motion.p>
 
-                <p className="font-normal">
+                <motion.p
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  transition={{
+                    type: "keyframes",
+                    ease: "circInOut",
+                    duration: 0.5,
+                  }}
+                  className="font-normal"
+                >
                   We believe education is a global language, but one that must
                   be spoken with local understanding. By bridging institutions,
                   cultures, and students across borders, we ensure that
@@ -112,19 +148,37 @@ export default function About() {
                   guide students with strategies that fit their unique context,
                   while helping institutions engage meaningfully with diverse
                   communities worldwide.
-                </p>
+                </motion.p>
               </div>
 
               <h1 className="text-[24px] font-semibold mt-5">
                 Ethical, Student-Centric Recruitment
               </h1>
               <div className=" flex flex-col gap-5 mt-4">
-                <p className="font-normal">
+                <motion.p
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  transition={{
+                    type: "keyframes",
+                    ease: "circInOut",
+                    duration: 0.5,
+                  }}
+                  className="font-normal"
+                >
                   Our processes are transparent, supportive, and driven by
                   student success, not just numbers.
-                </p>
+                </motion.p>
 
-                <p className="font-normal">
+                <motion.p
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  transition={{
+                    type: "keyframes",
+                    ease: "circInOut",
+                    duration: 0.5,
+                  }}
+                  className="font-normal"
+                >
                   For us, recruitment is not about numbers—it’s about futures.
                   Every process we design is transparent, ethical, and built
                   around the individual student’s goals. We walk alongside
@@ -133,14 +187,23 @@ export default function About() {
                   Success, to us, is measured not just by enrollment, but by the
                   long-term personal and academic growth of the students we
                   support.
-                </p>
+                </motion.p>
               </div>
 
               <h1 className="text-[24px] font-semibold mt-5">
                 Inclusive by Design
               </h1>
               <div className=" flex flex-col gap-5 mt-4">
-                <p className="font-normal">
+                <motion.p
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  transition={{
+                    type: "keyframes",
+                    ease: "circInOut",
+                    duration: 0.5,
+                  }}
+                  className="font-normal"
+                >
                   Inclusion isn’t an add-on; it’s embedded in our DNA. From the
                   way we write policies to the way we build partnerships, every
                   action is guided by a commitment to equity and belonging. We
@@ -148,19 +211,37 @@ export default function About() {
                   inclusive classroom environments, and champion diversity at
                   every level of engagement. For us, inclusion is both a
                   principle and a practice.
-                </p>
+                </motion.p>
               </div>
 
               <h1 className="text-[24px] font-semibold mt-5">
                 Experienced & Mission-Led Team
               </h1>
               <div className=" flex flex-col gap-5 mt-4">
-                <p className="font-normal">
+                <motion.p
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  transition={{
+                    type: "keyframes",
+                    ease: "circInOut",
+                    duration: 0.5,
+                  }}
+                  className="font-normal"
+                >
                   Our consultants and advisors come from diverse backgrounds in
                   higher education, international affairs, and cultural policy.
-                </p>
+                </motion.p>
 
-                <p className="font-normal">
+                <motion.p
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  transition={{
+                    type: "keyframes",
+                    ease: "circInOut",
+                    duration: 0.5,
+                  }}
+                  className="font-normal"
+                >
                   Our strength lies in the people behind our mission. With
                   backgrounds spanning higher education, international
                   relations, cultural policy, and student advisory services, our
@@ -168,7 +249,7 @@ export default function About() {
                   professionals, we are advocates for students—driven by a
                   shared vision of making global education accessible, ethical,
                   and transformative.
-                </p>
+                </motion.p>
               </div>
             </div>
             <div className="w-2/12 h-full  max-sm:w-full max-sm:mt-5  px-5">

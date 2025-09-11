@@ -1,3 +1,5 @@
+import { motion } from "framer-motion";
+
 const PartnerWithUs = () => {
   return (
     <>
@@ -8,19 +10,49 @@ const PartnerWithUs = () => {
             Partner With Us
           </h1>
           <div className="justify-center items-center flex flex-col max-sm:px-8">
-            <p className="font-normal text-xl text-[#074941]  text-center">
+            <motion.p
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{
+                type: "keyframes",
+                ease: "circInOut",
+                duration: 0.5,
+              }}
+              className="font-normal text-xl text-[#074941]  text-center"
+            >
               Are you and education provider looking to diversify your student
               base ?
-            </p>
-            <p className="font-normal text-xl text-[#074941] text-center">
+            </motion.p>
+            <motion.p
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{
+                type: "keyframes",
+                ease: "circInOut",
+                duration: 0.5,
+              }}
+              className="font-normal text-xl text-[#074941] text-center"
+            >
               A Gorvernment or ministries building strategies for inclusive
               global education ?
-            </p>
-            <p className="font-normal text-[#074941] text-xl text-center">
-              Or an agent looking to work a trusted global eduction provider ?{" "}
-            </p>
+            </motion.p>
+            <motion.p className="font-normal text-[#074941] text-xl text-center">
+              Or an agent looking to work a trusted global eduction
+              motion.provider ?{" "}
+            </motion.p>
           </div>
-          <p className="font-normal text-xl max-sm:mb-3 text-[#074941]">Let's collaborate.</p>
+          <motion.p
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{
+              type: "keyframes",
+              ease: "circInOut",
+              duration: 0.5,
+            }}
+            className="font-normal text-xl max-sm:mb-3 text-[#074941]"
+          >
+            Let's collaborate.
+          </motion.p>
         </div>
       </section>
     </>
