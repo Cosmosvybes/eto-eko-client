@@ -28,11 +28,12 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
   return (
     <>
       <motion.div
+        // initial={{ opacity: 0 }}
+        // animate={{ opacity: 1 }}
+        // transition={{ duration: 0.5, type: "tween", ease: "backIn" }}
         exit={{ opacity: 0 }}
         className={`fixed z-30 flex ${
-          !showFeedBack
-            ? "invisble translate-y-11/12 scale-0 opacity-0 inset-0 delay-1000"
-            : "scale-100  visible"
+          !showFeedBack ? "invisble translate-y-11/12 scale-0 opacity-0 inset-0 delay-1000" : "scale-100  visible"
         }  justify-center items-center top-0 bottom-0 right-0 transition duration-700 left-0 bg-[rgba(0,0,0,0.18)] max-sm:py-20 max-md:px-5 max-sm:px-2`}
       >
         <motion.div className="lg:w-2/3 bg-amber-600 rounded-lg lg:h-2/3 max-sm:w-full flex p-1 py-20 justify-center items-center flex-col relative  max-md:w-full max-sm:h-auto">
