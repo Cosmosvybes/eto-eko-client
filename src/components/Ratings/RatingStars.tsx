@@ -6,7 +6,7 @@ const RatingStars = ({
   setRating,
   isShowingFeedback,
 }: {
-  rating: number;
+  rating: any;
   isShowingFeedback: boolean;
   setRating(rating: number): void;
 }) => {

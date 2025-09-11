@@ -9,7 +9,7 @@ const Formbuilder = ({
     name: string;
   }[];
   handleFormChange(name: string, value: string): void;
-  formValues: { [key: string]: string };
+  formValues: { [key: string]: string | number };
 }) => {
   const FORM = formFields.map(({ type, name }) => {
     switch (type) {

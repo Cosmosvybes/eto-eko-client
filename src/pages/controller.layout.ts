@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
-import { quickContactUrl } from "../components/constants";
+import { feedBackUrl } from "../components/constants";
 import toast from "react-hot-toast";
 
 export const useLayoutController = () => {
@@ -8,9 +8,12 @@ export const useLayoutController = () => {
   const location = useLocation();
   const [showFeedBack, setShowFeedBack] = useState(false);
 
-  const [initialRating, seInitialRating] = useState(0);
-  const handlRatingChange = (newValue: number) => {
-    seInitialRating(newValue);
+  const [rating, setRating] = useState<number>(0);
+
+  const handlRatingChange = (newValue: any) => {
+    setRating(newValue);
+
+    // console.log(newValue);
   };
 
   useEffect(() => {
@@ -30,7 +33,9 @@ export const useLayoutController = () => {
   const values = formFields.reduce((acc, curr) => {
     return { ...acc, [curr.name]: curr.value };
   }, {});
-  const [formValues, setFormValues] = useState({ ...values });
+  const [formValues, setFormValues] = useState({
+    ...values,
+  });
 
   const handleFormChange = (newValue: string, name: string) => {
     setFormValues((prev) => ({ ...prev, [name]: newValue }));
@@ -42,16 +47,16 @@ export const useLayoutController = () => {
     );
 
     if (hasUnfilledInput == "") {
-      toast("Missing input value");
+      toast("Missing input value or ratings");
       return;
     }
 
     try {
       setLoading(true);
-      const response = await fetch(quickContactUrl, {
+      const response = await fetch(feedBackUrl, {
         method: "POST",
         headers: { "Content-Type": "Application/json" },
-        body: JSON.stringify({ ...formValues }),
+        body: JSON.stringify({ ...formValues, ratings: rating }),
       });
       const result = await response.json();
       console.log(result);
@@ -67,7 +72,7 @@ export const useLayoutController = () => {
     showFeedBack,
     setShowFeedBack,
     handlRatingChange,
-    initialRating,
+    rating,
     loading,
     handleFormChange,
     handleFormSubmit,

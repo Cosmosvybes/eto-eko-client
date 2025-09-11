@@ -30,3 +30,5 @@ export const SERVICE_IMAGES = [
 export const partnersAsset = [partner1, partner2, partner3, partner4];
 export const inquiryUrl = "http://localhost:2025/api/v1/enquiries";
 export const quickContactUrl = "http://localhost:2025/api/v1/contact-us";
+
+export const feedBackUrl = "http://localhost:2025/api/v1/students/feedback";
